@@ -1231,12 +1231,10 @@ body {
         1s ease forwards;
 }
 
-#secretContent iframe {
+.youtube-video {
     width: 100%;
 
-    height: 70vh;
-
-    min-height: 300px;
+    aspect-ratio: 16 / 9;
 
     border: none;
 
@@ -1247,25 +1245,6 @@ body {
     box-shadow:
         0 15px 40px
         rgba(80,30,50,.3);
-}
-
-@keyframes secretAppear {
-
-    from {
-        opacity: 0;
-
-        transform:
-            translateY(30px)
-            scale(.95);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-    }
 }
 
 
@@ -1374,11 +1353,6 @@ body {
         width: 90px;
         height: 135px;
     }
-
-    #secretContent iframe {
-        height: 56vw;
-        min-height: 220px;
-    }
 }
 
 @media(max-width:380px) {
@@ -1407,7 +1381,6 @@ body {
     .game-area {
         height: 370px;
     }
-
 }
 
 </style>
@@ -1472,7 +1445,7 @@ body {
     >
 
         <div class="small-text">
-            FOR SOMEONE SPECIAL
+            FOR CAYANG
         </div>
 
         <h1 class="birthday-title">
@@ -1501,26 +1474,28 @@ body {
 
 
 <!-- =====================================================
-     OUR MEMORIES
+     MEMORIES
 ===================================================== -->
 
 <section id="memories">
 
     <h2 class="memories-title">
-        Our Memories
+        gambaa tite🙈
     </h2>
+
 
     <div class="memory-grid">
 
+
         <div class="memory">
 
             <img
-                src="memory1.gif"
-                alt="Memory 1"
+                src="https://drive.google.com/uc?export=view&id=1JSEP7g-sdnx6CqYFOGr4lvP987YqwmMO"
+                alt="dr dungun ni nk meet"
             >
 
             <div class="caption">
-                our little moment ♡
+                dr dungun ni nk meet
             </div>
 
         </div>
@@ -1529,12 +1504,12 @@ body {
         <div class="memory">
 
             <img
-                src="memory2.gif"
-                alt="Memory 2"
+                src="https://drive.google.com/uc?export=view&id=1QexMIkV3JvLsp7UFiDlqIu6E8aEz2CVz"
+                alt="weng weng main brek cikit"
             >
 
             <div class="caption">
-                another beautiful day
+                weng weng main brek cikit
             </div>
 
         </div>
@@ -1543,12 +1518,12 @@ body {
         <div class="memory">
 
             <img
-                src="memory3.gif"
-                alt="Memory 3"
+                src="https://drive.google.com/uc?export=view&id=1lPvxSAEH6eT87TYjyCMesWArps66aSgI"
+                alt="GEDIKK"
             >
 
             <div class="caption">
-                just us ♡
+                GEDIKK ♡
             </div>
 
         </div>
@@ -1557,12 +1532,12 @@ body {
         <div class="memory">
 
             <img
-                src="memory4.gif"
-                alt="Memory 4"
+                src="https://drive.google.com/uc?export=view&id=1C5NWHrbsXXEZCMXf_JHHYk2BmdNMmhJ3"
+                alt="main arcade came ii"
             >
 
             <div class="caption">
-                a memory to keep
+                main arcade came ii
             </div>
 
         </div>
@@ -1571,12 +1546,12 @@ body {
         <div class="memory">
 
             <img
-                src="memory5.gif"
-                alt="Memory 5"
+                src="https://drive.google.com/uc?export=view&id=1UFyTvben_sD-wvdQpPptwr5oWTcBX8GI"
+                alt="YEY DPT BAG"
             >
 
             <div class="caption">
-                with you ♡
+                YEY DPT BAG
             </div>
 
         </div>
@@ -1585,12 +1560,12 @@ body {
         <div class="memory">
 
             <img
-                src="memory6.gif"
-                alt="Memory 6"
+                src="https://drive.google.com/uc?export=view&id=1b35QFxwbeZhDA-Mo9ULk3zbdSLxzcPGj"
+                alt="buat tiktok came ii"
             >
 
             <div class="caption">
-                always remember
+                buat tiktok came ii
             </div>
 
         </div>
@@ -1599,15 +1574,16 @@ body {
         <div class="memory">
 
             <img
-                src="memory7.gif"
-                alt="Memory 7"
+                src="https://drive.google.com/uc?export=view&id=1DpKj6SxVF5dumPIsQAH65AML1_CHbdZ0"
+                alt="ehek buat lopee"
             >
 
             <div class="caption">
-                one more memory ♡
+                ehek buat lopee
             </div>
 
         </div>
+
 
     </div>
 
@@ -1626,8 +1602,9 @@ body {
     </h2>
 
     <p class="game-subtitle">
-        Misi: Batrisya kena tembak Aika dengan panah cinta ❤️
+        awak kene tembak sy biar kene.
     </p>
+
 
     <div
         class="game-area"
@@ -1697,19 +1674,18 @@ body {
                 💘
             </div>
 
+
             <div class="win-title">
-                YEYY! ❤️
+                TEPAT SASARAN
             </div>
+
 
             <div class="win-text">
 
-                AIKA BATRISYA PUNYA! 😭❤️
-
-                <br>
-
-                Batrisya berjaya tembak panah cinta! 🏹
+                OFFICIAL SY MILIK CAYANG🤍🙈
 
             </div>
+
 
             <button
                 class="continue-button"
@@ -1720,6 +1696,7 @@ body {
 
         </div>
 
+
     </div>
 
 
@@ -1728,7 +1705,7 @@ body {
         id="shootButton"
         onclick="shootLoveArrow()"
     >
-        🏹 TEMBAK AIKA
+        SHOOT💘
     </button>
 
 
@@ -1754,6 +1731,7 @@ body {
         id="lockedBox"
     >
 
+
         <div
             class="lock-icon"
             id="lockIcon"
@@ -1768,7 +1746,7 @@ body {
 
 
         <p class="locked-subtitle">
-            Hmm... apa password dia? 🤭
+            try sayang teke apa password dia hehehehe🙈
         </p>
 
 
@@ -1796,12 +1774,14 @@ body {
 
         <div class="keypad">
 
+
             <button
                 class="key"
                 onclick="pressKey('1')"
             >
                 1
             </button>
+
 
             <button
                 class="key"
@@ -1810,12 +1790,14 @@ body {
                 2
             </button>
 
+
             <button
                 class="key"
                 onclick="pressKey('3')"
             >
                 3
             </button>
+
 
             <button
                 class="key"
@@ -1824,12 +1806,14 @@ body {
                 4
             </button>
 
+
             <button
                 class="key"
                 onclick="pressKey('5')"
             >
                 5
             </button>
+
 
             <button
                 class="key"
@@ -1838,12 +1822,14 @@ body {
                 6
             </button>
 
+
             <button
                 class="key"
                 onclick="pressKey('7')"
             >
                 7
             </button>
+
 
             <button
                 class="key"
@@ -1852,6 +1838,7 @@ body {
                 8
             </button>
 
+
             <button
                 class="key"
                 onclick="pressKey('9')"
@@ -1859,12 +1846,14 @@ body {
                 9
             </button>
 
+
             <button
                 class="key zero"
                 onclick="pressKey('0')"
             >
                 0
             </button>
+
 
         </div>
 
@@ -1881,19 +1870,18 @@ body {
 
         <div id="secretContent">
 
-            <!-- YOUTUBE BIRTHDAY VIDEO -->
+
+            <!-- YOUTUBE VIDEO -->
 
             <iframe
-                id="memoryVideo"
+                class="youtube-video"
                 src="https://www.youtube.com/embed/pQ1So8ra1aQ"
-                title="Birthday Video"
-                frameborder="0"
+                title="Birthday Sayang"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
+                allowfullscreen
+                playsinline
+            ></iframe>
 
-
-            <!-- FINAL MESSAGE -->
 
             <div class="final-message">
 
@@ -1904,32 +1892,35 @@ body {
 
                 <p>
 
-                    Terima kasih sebab hadir dalam
-                    hidup aku dan buat banyak benda
-                    kecil jadi kenangan yang aku takkan
-                    lupa.
+                    Terima kasih sayang dah hadir dalam
+                    hidup sy and buat bnyk kenangan
+                    dengan sy selama ni🥺.
 
                     <br><br>
 
-                    Semoga hari ni dan hari-hari yang
-                    akan datang penuh dengan benda
-                    yang buat awak senyum.
+                    semoga sayang dipnjngkan umur dan
+                    dimurahkan rezeki selalu and berjaya
+                    apa sayang buat tau🫶🏻.
 
                     <br><br>
 
-                    I hope we make many more memories
-                    together. ❤️
+                    Jaley jaley naik gunung,<br>
+                    Sebelum naik makey dulu vitamin,<br>
+                    Kalu sayo ajok awok jaley,<br>
+                    sudikoh awok jaley sampai ko plamin?
 
                 </p>
 
 
                 <div class="signature">
-                    — from someone who loves you ♡
+                    — dari aika untuk cintanya hehe ♡
                 </div>
 
             </div>
 
+
         </div>
+
 
     </div>
 
