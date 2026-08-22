@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Happy Birthday ❤️</title>
 
 <style>
-
-/* =====================================================
-   BASIC
-===================================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -33,26 +23,17 @@ body {
     overflow-x: hidden;
 }
 
-
-/* =====================================================
-   OPENING
-===================================================== */
+/* OPENING */
 
 #opening {
     position: fixed;
     inset: 0;
     z-index: 99999;
-
     background: #f8d7e3;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    transition:
-        opacity 1s ease,
-        visibility 1s ease;
-
+    transition: opacity 1s ease, visibility 1s ease;
     touch-action: none;
 }
 
@@ -70,124 +51,68 @@ body {
 
 .mail-title {
     color: #6d3048;
-
-    font-size:
-        clamp(25px, 7vw, 34px);
-
+    font-size: clamp(25px, 7vw, 34px);
     font-weight: bold;
-
     letter-spacing: 4px;
-
     margin-bottom: 35px;
 }
 
-
-/* =====================================================
-   ENVELOPE
-===================================================== */
+/* ENVELOPE */
 
 .envelope-area {
     width: 330px;
     height: 220px;
     max-width: 85vw;
-
     margin: auto;
-
     position: relative;
-
     cursor: pointer;
-
     perspective: 900px;
 }
 
 .envelope {
     position: absolute;
     inset: 0;
-
     background: #c96f91;
-
     border-radius: 3px;
-
-    box-shadow:
-        0 20px 50px
-        rgba(90,30,55,.35);
+    box-shadow: 0 20px 50px rgba(90,30,55,.35);
 }
 
 .envelope::before {
     content: "";
-
     position: absolute;
     inset: 0;
-
     background:
-        linear-gradient(
-            135deg,
-            transparent 49%,
-            #a94f72 50%,
-            transparent 51%
-        ),
-        linear-gradient(
-            45deg,
-            transparent 49%,
-            #a94f72 50%,
-            transparent 51%
-        );
+        linear-gradient(135deg, transparent 49%, #a94f72 50%, transparent 51%),
+        linear-gradient(45deg, transparent 49%, #a94f72 50%, transparent 51%);
 }
 
 .flap {
     position: absolute;
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 60%;
-
     background: #d98aa5;
-
-    clip-path:
-        polygon(
-            0 0,
-            100% 0,
-            50% 100%
-        );
-
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
     transform-origin: top center;
-
-    transition:
-        transform 1s
-        cubic-bezier(.2,.8,.2,1);
-
+    transition: transform 1s cubic-bezier(.2,.8,.2,1);
     z-index: 5;
 }
 
 .seal {
     position: absolute;
-
     left: 50%;
     top: 52%;
-
-    transform:
-        translate(-50%,-50%);
-
+    transform: translate(-50%,-50%);
     width: 56px;
     height: 56px;
-
     border-radius: 50%;
-
     background: #b85f80;
-
-    border:
-        3px solid
-        rgba(255,255,255,.35);
-
+    border: 3px solid rgba(255,255,255,.35);
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     font-size: 23px;
-
     z-index: 10;
 }
 
@@ -196,59 +121,36 @@ body {
 }
 
 .envelope.open {
-    animation:
-        envelopeOut
-        1s ease
-        .6s forwards;
+    animation: envelopeOut 1s ease .6s forwards;
 }
 
 @keyframes envelopeOut {
-
     100% {
-        transform:
-            translateY(-40px)
-            scale(.8);
-
+        transform: translateY(-40px) scale(.8);
         opacity: 0;
     }
 }
 
 .mail-hint {
     color: #805066;
-
     margin-top: 20px;
-
     font-size: 13px;
-
     font-style: italic;
-
     opacity: .85;
 }
 
-
-/* =====================================================
-   BIRTHDAY
-===================================================== */
+/* BIRTHDAY */
 
 #birthday {
     min-height: 100svh;
-
     position: relative;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
     background-image:
-        linear-gradient(
-            rgba(80,20,40,.20),
-            rgba(80,20,40,.50)
-        ),
+        linear-gradient(rgba(80,20,40,.20), rgba(80,20,40,.50)),
         url("birthday.jpg");
-
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -256,325 +158,172 @@ body {
 
 .birthday-content {
     opacity: 0;
-
-    transform:
-        translateY(30px);
-
-    transition:
-        opacity 1.5s ease,
-        transform 1.5s ease;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
 .birthday-content.show {
     opacity: 1;
-
-    transform:
-        translateY(0);
+    transform: translateY(0);
 }
 
 .small-text {
-    font-size:
-        clamp(12px,4vw,17px);
-
+    font-size: clamp(12px,4vw,17px);
     letter-spacing: 5px;
-
     margin-bottom: 20px;
-
-    text-shadow:
-        0 3px 15px
-        rgba(0,0,0,.5);
+    text-shadow: 0 3px 15px rgba(0,0,0,.5);
 }
 
 .birthday-title {
-    font-size:
-        clamp(48px,13vw,100px);
-
+    font-size: clamp(48px,13vw,100px);
     font-weight: 400;
-
     line-height: .95;
-
     letter-spacing: 2px;
-
-    text-shadow:
-        0 5px 25px
-        rgba(0,0,0,.6);
+    text-shadow: 0 5px 25px rgba(0,0,0,.6);
 }
 
 .heart {
     display: block;
-
     margin-top: 25px;
-
     font-size: 34px;
 }
 
 .scroll {
     position: absolute;
-
     bottom: 30px;
     left: 50%;
-
-    transform:
-        translateX(-50%);
-
+    transform: translateX(-50%);
     font-size: 12px;
-
     letter-spacing: 3px;
-
     opacity: .9;
-
-    animation:
-        bounce 1.5s infinite;
+    animation: bounce 1.5s infinite;
 }
 
 .scroll span {
     display: block;
-
     font-size: 25px;
-
     margin-top: 8px;
 }
 
 @keyframes bounce {
-
     0%,100% {
-        transform:
-            translate(-50%,0);
+        transform: translate(-50%,0);
     }
-
     50% {
-        transform:
-            translate(-50%,10px);
+        transform: translate(-50%,10px);
     }
 }
 
-
-/* =====================================================
-   OUR MEMORIES
-===================================================== */
+/* MEMORIES */
 
 #memories {
     min-height: 100svh;
-
-    padding:
-        80px 20px 110px;
-
+    padding: 80px 20px 110px;
     background: #f3b6c9;
 }
 
 .memories-title {
     text-align: center;
-
     color: white;
-
-    font-size:
-        clamp(38px,10vw,65px);
-
+    font-size: clamp(38px,10vw,65px);
     font-style: italic;
-
     font-weight: 400;
-
     margin-bottom: 60px;
-
-    text-shadow:
-        0 3px 12px
-        rgba(120,40,70,.25);
+    text-shadow: 0 3px 12px rgba(120,40,70,.25);
 }
 
 .memory-grid {
     width: 100%;
-
     max-width: 850px;
-
     margin: auto;
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns: repeat(3,1fr);
     gap: 28px;
-
     align-items: center;
 }
 
 .memory {
     background: #fffaf7;
-
-    padding:
-        8px 8px 18px;
-
-    box-shadow:
-        0 12px 25px
-        rgba(80,30,50,.25);
-
-    transform:
-        rotate(var(--rotate));
-
+    padding: 8px 8px 18px;
+    box-shadow: 0 12px 25px rgba(80,30,50,.25);
+    transform: rotate(var(--rotate));
     transition: .3s ease;
-
     border-radius: 2px;
-
     overflow: hidden;
 }
 
 .memory:hover {
-    transform:
-        rotate(0deg)
-        scale(1.05);
-
+    transform: rotate(0deg) scale(1.05);
     z-index: 5;
 }
 
 .memory img {
     width: 100%;
-
     aspect-ratio: 1 / 1;
-
     object-fit: cover;
-
     display: block;
 }
 
 .caption {
     color: #633044;
-
     text-align: center;
-
     font-size: 12px;
-
     margin-top: 10px;
 }
 
-.memory:nth-child(1) {
-    --rotate: -5deg;
-}
+.memory:nth-child(1) { --rotate: -5deg; }
+.memory:nth-child(2) { --rotate: 3deg; }
+.memory:nth-child(3) { --rotate: -2deg; }
+.memory:nth-child(4) { --rotate: 5deg; }
+.memory:nth-child(5) { --rotate: -4deg; }
+.memory:nth-child(6) { --rotate: 2deg; }
+.memory:nth-child(7) { --rotate: -3deg; }
 
-.memory:nth-child(2) {
-    --rotate: 3deg;
-}
-
-.memory:nth-child(3) {
-    --rotate: -2deg;
-}
-
-.memory:nth-child(4) {
-    --rotate: 5deg;
-}
-
-.memory:nth-child(5) {
-    --rotate: -4deg;
-}
-
-.memory:nth-child(6) {
-    --rotate: 2deg;
-}
-
-.memory:nth-child(7) {
-    --rotate: -3deg;
-}
-
-
-/* =====================================================
-   LOVE GAME
-===================================================== */
+/* LOVE GAME */
 
 #loveGame {
     min-height: 100svh;
-
-    padding:
-        70px 15px 90px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #f8d7e3,
-            #f4b4ca
-        );
-
+    padding: 70px 15px 90px;
+    background: linear-gradient(180deg,#f8d7e3,#f4b4ca);
     color: #633044;
-
     text-align: center;
-
     overflow: hidden;
-
     position: relative;
 }
 
 .game-title {
-    font-size:
-        clamp(34px,9vw,55px);
-
+    font-size: clamp(34px,9vw,55px);
     font-weight: 400;
-
     margin-bottom: 8px;
 }
 
 .game-subtitle {
     font-family: Arial, sans-serif;
-
     font-size: 14px;
-
     color: #805066;
-
     margin-bottom: 25px;
 }
 
-
-/* =====================================================
-   GAME AREA
-===================================================== */
-
 .game-area {
     width: 100%;
-
     max-width: 430px;
-
     height: 430px;
-
     margin: auto;
-
     position: relative;
-
     overflow: hidden;
-
     border-radius: 28px;
-
     background:
-        radial-gradient(
-            circle at 20% 20%,
-            rgba(255,255,255,.8),
-            transparent 25%
-        ),
-        linear-gradient(
-            180deg,
-            #ffd9e7,
-            #f4aeca
-        );
-
-    box-shadow:
-        0 20px 45px
-        rgba(100,40,65,.2);
-
-    border:
-        2px solid
-        rgba(255,255,255,.6);
+        radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 25%),
+        linear-gradient(180deg,#ffd9e7,#f4aeca);
+    box-shadow: 0 20px 45px rgba(100,40,65,.2);
+    border: 2px solid rgba(255,255,255,.6);
 }
-
-
-/* =====================================================
-   CLOUDS
-===================================================== */
 
 .cloud {
     position: absolute;
-
     font-size: 35px;
-
     opacity: .55;
-
-    animation:
-        cloudMove 8s linear infinite;
+    animation: cloudMove 8s linear infinite;
 }
 
 .cloud.one {
@@ -585,300 +334,170 @@ body {
 .cloud.two {
     top: 100px;
     right: -30px;
-
     animation-delay: -3s;
 }
 
 @keyframes cloudMove {
-
     from {
-        transform:
-            translateX(-20px);
+        transform: translateX(-20px);
     }
-
     to {
-        transform:
-            translateX(30px);
+        transform: translateX(30px);
     }
 }
 
-
-/* =====================================================
-   AIKA TARGET
-===================================================== */
+/* AIKA */
 
 .target {
     position: absolute;
-
     top: 55px;
-
     left: 50%;
-
-    transform:
-        translateX(-50%);
-
+    transform: translateX(-50%);
     width: 100px;
     height: 150px;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     z-index: 5;
-
-    transition:
-        left .45s ease;
-
+    transition: left .45s ease;
     user-select: none;
 }
 
 .target img {
     width: 100%;
     height: 100%;
-
     object-fit: contain;
-
-    filter:
-        drop-shadow(
-            0 8px 8px
-            rgba(80,30,50,.18)
-        );
+    filter: drop-shadow(0 8px 8px rgba(80,30,50,.18));
 }
 
 .target-heart {
     position: absolute;
-
     top: 25px;
-
     left: 50%;
-
-    transform:
-        translateX(-50%);
-
+    transform: translateX(-50%);
     font-size: 24px;
-
-    animation:
-        heartFloat 1.2s
-        ease-in-out infinite;
-
+    animation: heartFloat 1.2s ease-in-out infinite;
     z-index: 6;
 }
 
 @keyframes heartFloat {
-
     0%,100% {
-        transform:
-            translate(-50%,0);
+        transform: translate(-50%,0);
     }
-
     50% {
-        transform:
-            translate(-50%,-8px);
+        transform: translate(-50%,-8px);
     }
 }
 
-
-/* =====================================================
-   BATRISYA
-===================================================== */
+/* BATRISYA */
 
 .player {
     position: absolute;
-
     bottom: 20px;
-
     left: 50%;
-
-    transform:
-        translateX(-50%);
-
+    transform: translateX(-50%);
     width: 120px;
     height: 150px;
-
     z-index: 10;
-
     user-select: none;
 }
 
 .player img {
     width: 100%;
     height: 100%;
-
     object-fit: contain;
-
-    filter:
-        drop-shadow(
-            0 8px 8px
-            rgba(80,30,50,.18)
-        );
+    filter: drop-shadow(0 8px 8px rgba(80,30,50,.18));
 }
 
-
-/* =====================================================
-   LOVE ARROW
-===================================================== */
+/* ARROW */
 
 .love-arrow {
     position: absolute;
-
     width: 90px;
     height: 8px;
-
     border-radius: 10px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #ff5c91,
-            #ff9fbc
-        );
-
+    background: linear-gradient(90deg,#ff5c91,#ff9fbc);
     z-index: 9;
-
     display: none;
-
-    transform-origin:
-        left center;
-
-    box-shadow:
-        0 3px 10px
-        rgba(255,60,120,.35);
+    transform-origin: left center;
+    box-shadow: 0 3px 10px rgba(255,60,120,.35);
 }
 
 .love-arrow::after {
     content: "💘";
-
     position: absolute;
-
     right: -17px;
     top: -16px;
-
     font-size: 30px;
 }
 
-
-/* =====================================================
-   HIT HEART
-===================================================== */
+/* HIT HEART */
 
 .hit-heart {
     position: absolute;
-
     font-size: 35px;
-
     z-index: 20;
-
     pointer-events: none;
-
-    animation:
-        hitHeart 1s ease forwards;
+    animation: hitHeart 1s ease forwards;
 }
 
 @keyframes hitHeart {
-
     0% {
         opacity: 1;
-
-        transform:
-            scale(.4)
-            translateY(0);
+        transform: scale(.4) translateY(0);
     }
-
     100% {
         opacity: 0;
-
-        transform:
-            scale(1.8)
-            translateY(-100px);
+        transform: scale(1.8) translateY(-100px);
     }
 }
 
-
-/* =====================================================
-   SHOOT BUTTON
-===================================================== */
+/* SHOOT BUTTON */
 
 .shoot-button {
     margin-top: 22px;
-
     border: none;
-
     border-radius: 999px;
-
-    padding:
-        16px 28px;
-
+    padding: 16px 28px;
     background: #b85f80;
-
     color: white;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia,"Times New Roman",serif;
     font-size: 16px;
-
-    box-shadow:
-        0 10px 25px
-        rgba(100,40,65,.2);
-
+    box-shadow: 0 10px 25px rgba(100,40,65,.2);
     cursor: pointer;
-
     transition: .15s ease;
 }
 
 .shoot-button:active {
-    transform:
-        scale(.92);
+    transform: scale(.92);
 }
 
 .shoot-button:disabled {
     opacity: .5;
-
     pointer-events: none;
 }
 
 .game-status {
     min-height: 30px;
-
     margin-top: 17px;
-
-    font-family: Arial, sans-serif;
-
+    font-family: Arial,sans-serif;
     font-size: 14px;
-
     color: #805066;
 }
 
-
-/* =====================================================
-   WIN
-===================================================== */
+/* WIN */
 
 .win-message {
     display: none;
-
     position: absolute;
-
     inset: 0;
-
     z-index: 100;
-
-    background:
-        rgba(248,215,227,.94);
-
+    background: rgba(248,215,227,.94);
     align-items: center;
-
     justify-content: center;
-
     flex-direction: column;
-
     padding: 25px;
-
-    animation:
-        winAppear .7s ease forwards;
+    animation: winAppear .7s ease forwards;
 }
 
 .win-message.show {
@@ -887,304 +506,183 @@ body {
 
 .win-emoji {
     font-size: 75px;
-
-    animation:
-        winBounce .8s
-        ease infinite alternate;
+    animation: winBounce .8s ease infinite alternate;
 }
 
 .win-title {
     margin-top: 15px;
-
-    font-size:
-        clamp(30px,8vw,48px);
-
+    font-size: clamp(30px,8vw,48px);
     color: #9e4165;
-
     font-weight: bold;
 }
 
 .win-text {
     margin-top: 12px;
-
-    font-family: Arial, sans-serif;
-
+    font-family: Arial,sans-serif;
     color: #633044;
-
     line-height: 1.7;
 }
 
 .continue-button {
     margin-top: 25px;
-
     border: none;
-
     border-radius: 999px;
-
-    padding:
-        14px 25px;
-
+    padding: 14px 25px;
     background: #633044;
-
     color: white;
-
     font-size: 15px;
-
     cursor: pointer;
 }
 
 @keyframes winAppear {
-
     from {
         opacity: 0;
-
-        transform:
-            scale(.8);
+        transform: scale(.8);
     }
-
     to {
         opacity: 1;
-
-        transform:
-            scale(1);
+        transform: scale(1);
     }
 }
 
 @keyframes winBounce {
-
     from {
-        transform:
-            translateY(0)
-            rotate(-5deg);
+        transform: translateY(0) rotate(-5deg);
     }
-
     to {
-        transform:
-            translateY(-10px)
-            rotate(5deg);
+        transform: translateY(-10px) rotate(5deg);
     }
 }
 
-
-/* =====================================================
-   CONFETTI
-===================================================== */
+/* CONFETTI */
 
 .confetti {
     position: fixed;
-
     top: -20px;
-
     font-size: 20px;
-
     z-index: 99999;
-
     pointer-events: none;
-
-    animation:
-        confettiFall
-        2.5s linear forwards;
+    animation: confettiFall 2.5s linear forwards;
 }
 
 @keyframes confettiFall {
-
     to {
-        transform:
-            translateY(110vh)
-            rotate(720deg);
-
+        transform: translateY(110vh) rotate(720deg);
         opacity: 0;
     }
 }
 
-
-/* =====================================================
-   LOCKED
-===================================================== */
+/* LOCKED */
 
 #locked {
     min-height: 100svh;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     text-align: center;
-
-    padding:
-        50px 20px;
-
+    padding: 50px 20px;
     background: #f8d7e3;
-
     color: #633044;
 }
 
 .locked-box {
     width: 100%;
-
     max-width: 420px;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
 }
 
 .lock-icon {
     font-size: 55px;
-
     margin-bottom: 22px;
-
     transition: .4s ease;
 }
 
 .locked-title {
-    font-size:
-        clamp(30px,8vw,45px);
-
+    font-size: clamp(30px,8vw,45px);
     font-weight: 400;
-
     margin-bottom: 12px;
 }
 
 .locked-subtitle {
-    font-family: Arial, sans-serif;
-
+    font-family: Arial,sans-serif;
     font-size: 15px;
-
     line-height: 1.7;
-
     margin-bottom: 30px;
-
     color: #805066;
 }
 
-
-/* =====================================================
-   PASSCODE
-===================================================== */
-
 .passcode-title {
-    font-family: Arial, sans-serif;
-
+    font-family: Arial,sans-serif;
     font-size: 15px;
-
     margin-bottom: 18px;
-
     color: #633044;
 }
 
 .passcode-dots {
     display: flex;
-
     justify-content: center;
-
     gap: 13px;
-
     margin-bottom: 35px;
 }
 
 .dot {
     width: 11px;
     height: 11px;
-
     border-radius: 50%;
-
     background: transparent;
-
-    border:
-        1.5px solid
-        #8e5067;
-
+    border: 1.5px solid #8e5067;
     transition: .15s ease;
 }
 
 .dot.filled {
     background: #633044;
-
-    transform:
-        scale(1.05);
+    transform: scale(1.05);
 }
 
-
-/* =====================================================
-   KEYPAD
-===================================================== */
+/* KEYPAD */
 
 .keypad {
     width: 270px;
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns: repeat(3,1fr);
     gap: 13px;
 }
 
 .key {
     width: 78px;
     height: 78px;
-
     border-radius: 50%;
-
     border: none;
-
-    background:
-        rgba(255,255,255,.72);
-
+    background: rgba(255,255,255,.72);
     color: #633044;
-
-    font-family: Arial, sans-serif;
-
+    font-family: Arial,sans-serif;
     font-size: 28px;
-
     cursor: pointer;
-
-    box-shadow:
-        0 5px 15px
-        rgba(100,40,65,.12);
-
-    transition:
-        transform .08s ease,
-        background .15s ease;
+    box-shadow: 0 5px 15px rgba(100,40,65,.12);
+    transition: transform .08s ease,background .15s ease;
 }
 
 .key:active {
-    transform:
-        scale(.88);
-
-    background:
-        rgba(255,255,255,.95);
+    transform: scale(.88);
+    background: rgba(255,255,255,.95);
 }
 
 .key.zero {
     grid-column: 2;
 }
 
-
-/* =====================================================
-   ERROR
-===================================================== */
+/* ERROR */
 
 .passcode-error {
     height: 22px;
-
     margin-top: 20px;
-
-    font-family: Arial, sans-serif;
-
+    font-family: Arial,sans-serif;
     font-size: 14px;
-
     color: #b85f80;
-
     opacity: 0;
-
-    transition:
-        opacity .2s ease;
+    transition: opacity .2s ease;
 }
 
 .passcode-error.show {
@@ -1192,129 +690,91 @@ body {
 }
 
 .shake {
-    animation:
-        shake .4s ease;
+    animation: shake .4s ease;
 }
 
 @keyframes shake {
-
     0%,100% {
-        transform:
-            translateX(0);
+        transform: translateX(0);
     }
-
     25% {
-        transform:
-            translateX(-9px);
+        transform: translateX(-9px);
     }
-
     75% {
-        transform:
-            translateX(9px);
+        transform: translateX(9px);
     }
 }
 
-
-/* =====================================================
-   SECRET
-===================================================== */
+/* SECRET */
 
 #secretContent {
     display: none;
-
     width: 100%;
-
     margin-top: 30px;
-
-    animation:
-        secretAppear
-        1s ease forwards;
+    animation: secretAppear 1s ease forwards;
 }
 
-.youtube-video {
+#secretContent video {
     width: 100%;
-
-    aspect-ratio: 16 / 9;
-
-    border: none;
-
+    max-height: 70vh;
+    object-fit: contain;
     border-radius: 18px;
-
     background: black;
-
-    box-shadow:
-        0 15px 40px
-        rgba(80,30,50,.3);
+    box-shadow: 0 15px 40px rgba(80,30,50,.3);
 }
 
+@keyframes secretAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
-/* =====================================================
-   FINAL MESSAGE
-===================================================== */
+/* FINAL MESSAGE */
 
 .final-message {
     margin-top: 50px;
-
-    padding:
-        0 10px 30px;
-
+    padding: 0 10px 30px;
     color: #633044;
-
     text-align: center;
-
-    animation:
-        finalMessageIn
-        1.2s ease forwards;
+    animation: finalMessageIn 1.2s ease forwards;
 }
 
 .final-message h2 {
-    font-size:
-        clamp(32px,8vw,55px);
-
+    font-size: clamp(32px,8vw,55px);
     font-weight: 400;
-
     margin-bottom: 25px;
 }
 
 .final-message p {
-    font-family: Arial, sans-serif;
-
+    font-family: Arial,sans-serif;
     font-size: 15px;
-
     line-height: 1.9;
-
     opacity: .9;
 }
 
 .final-message .signature {
     margin-top: 25px;
-
     font-size: 19px;
-
     font-style: italic;
 }
 
 @keyframes finalMessageIn {
-
     from {
         opacity: 0;
-
-        transform:
-            translateY(30px);
+        transform: translateY(30px);
     }
-
     to {
         opacity: 1;
-
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
 }
 
-
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media(max-width:650px) {
 
@@ -1324,19 +784,13 @@ body {
     }
 
     .memory-grid {
-        grid-template-columns:
-            repeat(2,1fr);
-
-        gap:
-            22px 15px;
+        grid-template-columns: repeat(2,1fr);
+        gap: 22px 15px;
     }
 
     .memory:nth-child(3) {
-        grid-column:
-            1 / 3;
-
+        grid-column: 1 / 3;
         width: 48%;
-
         justify-self: center;
     }
 
@@ -1382,18 +836,12 @@ body {
         height: 370px;
     }
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
-     OPENING
-===================================================== -->
+<!-- OPENING -->
 
 <section id="opening">
 
@@ -1403,15 +851,9 @@ body {
             YOU GOT A MAIL !
         </div>
 
-        <div
-            class="envelope-area"
-            onclick="openEnvelope()"
-        >
+        <div class="envelope-area" onclick="openEnvelope()">
 
-            <div
-                class="envelope"
-                id="envelope"
-            >
+            <div class="envelope" id="envelope">
 
                 <div class="flap"></div>
 
@@ -1432,17 +874,11 @@ body {
 </section>
 
 
-
-<!-- =====================================================
-     HAPPY BIRTHDAY
-===================================================== -->
+<!-- HAPPY BIRTHDAY -->
 
 <section id="birthday">
 
-    <div
-        class="birthday-content"
-        id="birthdayContent"
-    >
+    <div class="birthday-content" id="birthdayContent">
 
         <div class="small-text">
             FOR CAYANG
@@ -1460,22 +896,14 @@ body {
     </div>
 
     <div class="scroll">
-
         SCROLL DOWN
-
-        <span>
-            ↓
-        </span>
-
+        <span>↓</span>
     </div>
 
 </section>
 
 
-
-<!-- =====================================================
-     MEMORIES
-===================================================== -->
+<!-- MEMORIES -->
 
 <section id="memories">
 
@@ -1483,15 +911,13 @@ body {
         gambaa tite🙈
     </h2>
 
-
     <div class="memory-grid">
-
 
         <div class="memory">
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1JSEP7g-sdnx6CqYFOGr4lvP987YqwmMO"
-                alt="dr dungun ni nk meet"
+                alt="Memory 1"
             >
 
             <div class="caption">
@@ -1505,7 +931,7 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1QexMIkV3JvLsp7UFiDlqIu6E8aEz2CVz"
-                alt="weng weng main brek cikit"
+                alt="Memory 2"
             >
 
             <div class="caption">
@@ -1519,7 +945,7 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1lPvxSAEH6eT87TYjyCMesWArps66aSgI"
-                alt="GEDIKK"
+                alt="Memory 3"
             >
 
             <div class="caption">
@@ -1533,7 +959,7 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1C5NWHrbsXXEZCMXf_JHHYk2BmdNMmhJ3"
-                alt="main arcade came ii"
+                alt="Memory 4"
             >
 
             <div class="caption">
@@ -1547,7 +973,7 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1UFyTvben_sD-wvdQpPptwr5oWTcBX8GI"
-                alt="YEY DPT BAG"
+                alt="Memory 5"
             >
 
             <div class="caption">
@@ -1561,7 +987,7 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1b35QFxwbeZhDA-Mo9ULk3zbdSLxzcPGj"
-                alt="buat tiktok came ii"
+                alt="Memory 6"
             >
 
             <div class="caption">
@@ -1575,7 +1001,7 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1DpKj6SxVF5dumPIsQAH65AML1_CHbdZ0"
-                alt="ehek buat lopee"
+                alt="Memory 7"
             >
 
             <div class="caption">
@@ -1584,16 +1010,12 @@ body {
 
         </div>
 
-
     </div>
 
 </section>
 
 
-
-<!-- =====================================================
-     LOVE GAME
-===================================================== -->
+<!-- LOVE GAME -->
 
 <section id="loveGame">
 
@@ -1605,11 +1027,7 @@ body {
         awak kene tembak sy biar kene.
     </p>
 
-
-    <div
-        class="game-area"
-        id="gameArea"
-    >
+    <div class="game-area" id="gameArea">
 
         <div class="cloud one">
             ☁️
@@ -1619,13 +1037,7 @@ body {
             ☁️
         </div>
 
-
-        <!-- AIKA -->
-
-        <div
-            class="target"
-            id="target"
-        >
+        <div class="target" id="target">
 
             <img
                 src="aika.png"
@@ -1634,24 +1046,14 @@ body {
 
         </div>
 
-
-        <div
-            class="target-heart"
-            id="targetHeart"
-        >
+        <div class="target-heart" id="targetHeart">
             ❤️
         </div>
-
-
-        <!-- ARROW -->
 
         <div
             class="love-arrow"
             id="loveArrow"
         ></div>
-
-
-        <!-- BATRISYA -->
 
         <div class="player">
 
@@ -1662,9 +1064,6 @@ body {
 
         </div>
 
-
-        <!-- WIN -->
-
         <div
             class="win-message"
             id="winMessage"
@@ -1674,18 +1073,19 @@ body {
                 💘
             </div>
 
-
             <div class="win-title">
-                TEPAT SASARAN
+                YEYY! ❤️
             </div>
 
-
             <div class="win-text">
+
+                TEPAT SASARAN
+
+                <br>
 
                 OFFICIAL SY MILIK CAYANG🤍🙈
 
             </div>
-
 
             <button
                 class="continue-button"
@@ -1696,18 +1096,15 @@ body {
 
         </div>
 
-
     </div>
-
 
     <button
         class="shoot-button"
         id="shootButton"
         onclick="shootLoveArrow()"
     >
-        SHOOT💘
+        🏹 SHOOT💘
     </button>
-
 
     <div
         class="game-status"
@@ -1719,10 +1116,7 @@ body {
 </section>
 
 
-
-<!-- =====================================================
-     LOCKED SURPRISE
-===================================================== -->
+<!-- LOCKED SURPRISE -->
 
 <section id="locked">
 
@@ -1731,7 +1125,6 @@ body {
         id="lockedBox"
     >
 
-
         <div
             class="lock-icon"
             id="lockIcon"
@@ -1739,21 +1132,17 @@ body {
             🔒
         </div>
 
-
         <h2 class="locked-title">
             Ada satu lagi...
         </h2>
-
 
         <p class="locked-subtitle">
             try sayang teke apa password dia hehehehe🙈
         </p>
 
-
         <div class="passcode-title">
             Enter Passcode
         </div>
-
 
         <div
             class="passcode-dots"
@@ -1769,94 +1158,25 @@ body {
 
         </div>
 
-
-        <!-- KEYPAD -->
-
         <div class="keypad">
 
+            <button class="key" onclick="pressKey('1')">1</button>
+            <button class="key" onclick="pressKey('2')">2</button>
+            <button class="key" onclick="pressKey('3')">3</button>
 
-            <button
-                class="key"
-                onclick="pressKey('1')"
-            >
-                1
-            </button>
+            <button class="key" onclick="pressKey('4')">4</button>
+            <button class="key" onclick="pressKey('5')">5</button>
+            <button class="key" onclick="pressKey('6')">6</button>
 
+            <button class="key" onclick="pressKey('7')">7</button>
+            <button class="key" onclick="pressKey('8')">8</button>
+            <button class="key" onclick="pressKey('9')">9</button>
 
-            <button
-                class="key"
-                onclick="pressKey('2')"
-            >
-                2
-            </button>
-
-
-            <button
-                class="key"
-                onclick="pressKey('3')"
-            >
-                3
-            </button>
-
-
-            <button
-                class="key"
-                onclick="pressKey('4')"
-            >
-                4
-            </button>
-
-
-            <button
-                class="key"
-                onclick="pressKey('5')"
-            >
-                5
-            </button>
-
-
-            <button
-                class="key"
-                onclick="pressKey('6')"
-            >
-                6
-            </button>
-
-
-            <button
-                class="key"
-                onclick="pressKey('7')"
-            >
-                7
-            </button>
-
-
-            <button
-                class="key"
-                onclick="pressKey('8')"
-            >
-                8
-            </button>
-
-
-            <button
-                class="key"
-                onclick="pressKey('9')"
-            >
-                9
-            </button>
-
-
-            <button
-                class="key zero"
-                onclick="pressKey('0')"
-            >
+            <button class="key zero" onclick="pressKey('0')">
                 0
             </button>
 
-
         </div>
-
 
         <div
             class="passcode-error"
@@ -1865,23 +1185,23 @@ body {
             Try again 🤭
         </div>
 
-
-        <!-- SECRET -->
-
         <div id="secretContent">
 
-
-            <!-- YOUTUBE VIDEO -->
-
-            <iframe
-                class="youtube-video"
-                src="https://www.youtube.com/embed/pQ1So8ra1aQ"
-                title="Birthday Sayang"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+            <video
+                id="memoryVideo"
+                controls
                 playsinline
-            ></iframe>
+                preload="metadata"
+            >
 
+                <source
+                    src="https://drive.google.com/uc?export=download&id=1YwTZMphFK4DtU430599VfbdKeHCxOStg"
+                    type="video/mp4"
+                >
+
+                Your browser does not support video.
+
+            </video>
 
             <div class="final-message">
 
@@ -1889,18 +1209,13 @@ body {
                     Happy Birthday, Sayang ❤️
                 </h2>
 
-
                 <p>
 
-                    Terima kasih sayang dah hadir dalam
-                    hidup sy and buat bnyk kenangan
-                    dengan sy selama ni🥺.
+                    Terima kasih sayang dah hadir dalam hidup sy and buat bnyk kenangan dengan sy selama ni🥺.
 
                     <br><br>
 
-                    semoga sayang dipnjngkan umur dan
-                    dimurahkan rezeki selalu and berjaya
-                    apa sayang buat tau🫶🏻.
+                    semoga sayang dipnjngkan umur dan dimurahkan rezeki selalu and berjaya apa sayang buat tau🫶🏻.
 
                     <br><br>
 
@@ -1911,115 +1226,70 @@ body {
 
                 </p>
 
-
                 <div class="signature">
                     — dari aika untuk cintanya hehe ♡
                 </div>
 
             </div>
 
-
         </div>
-
 
     </div>
 
 </section>
 
 
-
 <script>
 
-/* =====================================================
-   OPENING SCROLL LOCK
-===================================================== */
+/* OPENING SCROLL LOCK */
 
 let envelopeOpened = false;
 
-if (
-    "scrollRestoration"
-    in history
-) {
-
-    history.scrollRestoration =
-        "manual";
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
 }
 
+window.scrollTo(0,0);
 
-window.scrollTo(
-    0,
-    0
-);
+document.body.style.overflow = "hidden";
+document.documentElement.style.overflow = "hidden";
 
+const forceTop = setInterval(function() {
 
-document.body.style.overflow =
-    "hidden";
+    if (!envelopeOpened) {
+        window.scrollTo(0,0);
+    } else {
+        clearInterval(forceTop);
+    }
 
-document.documentElement.style.overflow =
-    "hidden";
-
-
-const forceTop =
-    setInterval(
-        function() {
-
-            if (!envelopeOpened) {
-
-                window.scrollTo(
-                    0,
-                    0
-                );
-
-            } else {
-
-                clearInterval(
-                    forceTop
-                );
-
-            }
-
-        },
-        50
-    );
-
+},50);
 
 document.addEventListener(
     "touchmove",
     function(event) {
 
         if (!envelopeOpened) {
-
             event.preventDefault();
-
         }
 
     },
-    {
-        passive: false
-    }
+    { passive:false }
 );
-
 
 document.addEventListener(
     "wheel",
     function(event) {
 
         if (!envelopeOpened) {
-
             event.preventDefault();
-
         }
 
     },
-    {
-        passive: false
-    }
+    { passive:false }
 );
 
 
-/* =====================================================
-   OPEN ENVELOPE
-===================================================== */
+/* OPEN ENVELOPE */
 
 function openEnvelope() {
 
@@ -2027,75 +1297,39 @@ function openEnvelope() {
         return;
     }
 
-
     const envelope =
-        document.getElementById(
-            "envelope"
-        );
-
+        document.getElementById("envelope");
 
     const opening =
-        document.getElementById(
-            "opening"
-        );
-
+        document.getElementById("opening");
 
     const birthdayContent =
-        document.getElementById(
-            "birthdayContent"
-        );
+        document.getElementById("birthdayContent");
 
+    window.scrollTo(0,0);
 
-    window.scrollTo(
-        0,
-        0
-    );
+    envelopeOpened = true;
 
+    envelope.classList.add("open");
 
-    envelopeOpened =
-        true;
+    setTimeout(function() {
 
+        opening.classList.add("hide");
 
-    envelope.classList.add(
-        "open"
-    );
+        document.body.style.overflow = "auto";
+        document.documentElement.style.overflow = "auto";
 
+        birthdayContent.classList.add("show");
 
-    setTimeout(
-        function() {
-
-            opening.classList.add(
-                "hide"
-            );
-
-
-            document.body.style.overflow =
-                "auto";
-
-
-            document.documentElement.style.overflow =
-                "auto";
-
-
-            birthdayContent.classList.add(
-                "show"
-            );
-
-        },
-        1300
-    );
+    },1300);
 
 }
 
 
-/* =====================================================
-   LOVE GAME
-===================================================== */
+/* LOVE GAME */
 
 let gameWon = false;
-
 let targetPosition = 50;
-
 
 function moveTarget() {
 
@@ -2103,44 +1337,26 @@ function moveTarget() {
         return;
     }
 
-
     const target =
-        document.getElementById(
-            "target"
-        );
-
+        document.getElementById("target");
 
     const targetHeart =
-        document.getElementById(
-            "targetHeart"
-        );
-
+        document.getElementById("targetHeart");
 
     targetPosition =
-        Math.floor(
-            Math.random() * 60
-        ) + 20;
-
+        Math.floor(Math.random() * 60) + 20;
 
     target.style.left =
         targetPosition + "%";
 
-
     targetHeart.style.left =
         targetPosition + "%";
-
 }
 
-
-setInterval(
-    moveTarget,
-    1700
-);
+setInterval(moveTarget,1700);
 
 
-/* =====================================================
-   SHOOT LOVE ARROW
-===================================================== */
+/* SHOOT */
 
 function shootLoveArrow() {
 
@@ -2148,287 +1364,163 @@ function shootLoveArrow() {
         return;
     }
 
-
     const arrow =
-        document.getElementById(
-            "loveArrow"
-        );
-
+        document.getElementById("loveArrow");
 
     const target =
-        document.getElementById(
-            "target"
-        );
-
+        document.getElementById("target");
 
     const gameArea =
-        document.getElementById(
-            "gameArea"
-        );
-
+        document.getElementById("gameArea");
 
     const button =
-        document.getElementById(
-            "shootButton"
-        );
-
+        document.getElementById("shootButton");
 
     const status =
-        document.getElementById(
-            "gameStatus"
-        );
+        document.getElementById("gameStatus");
 
-
-    button.disabled =
-        true;
-
+    button.disabled = true;
 
     const areaRect =
         gameArea.getBoundingClientRect();
 
-
     const targetRect =
         target.getBoundingClientRect();
-
 
     const shooterX =
         areaRect.width / 2;
 
-
     const shooterY =
         areaRect.height - 80;
-
 
     const targetX =
         targetRect.left -
         areaRect.left +
         targetRect.width / 2;
 
-
     const targetY =
         targetRect.top -
         areaRect.top +
         targetRect.height / 2;
 
-
     const difference =
-        Math.abs(
-            shooterX -
-            targetX
-        );
+        Math.abs(shooterX - targetX);
 
-
-    arrow.style.display =
-        "block";
-
+    arrow.style.display = "block";
 
     arrow.style.left =
-        (
-            shooterX - 45
-        ) + "px";
-
+        (shooterX - 45) + "px";
 
     arrow.style.top =
         shooterY + "px";
-
 
     const angle =
         Math.atan2(
             targetY - shooterY,
             targetX - shooterX
-        )
-        *
-        180 /
-        Math.PI;
-
+        ) * 180 / Math.PI;
 
     arrow.style.transform =
-        "rotate(" +
-        angle +
-        "deg)";
+        "rotate(" + angle + "deg)";
 
-
-    if (
-        difference < 95
-    ) {
+    if (difference < 95) {
 
         status.innerHTML =
             "💘 KENA! AIKA DAH KENA PANAH CINTA! ❤️";
 
+        setTimeout(function() {
 
-        setTimeout(
-            function() {
+            arrow.style.display = "none";
 
-                arrow.style.display =
-                    "none";
+            createHitEffect(
+                targetX,
+                targetY
+            );
 
+            winGame();
 
-                createHitEffect(
-                    targetX,
-                    targetY
-                );
+        },500);
 
-
-                winGame();
-
-            },
-            500
-        );
-
-    }
-
-    else {
+    } else {
 
         status.innerHTML =
             "HAHAHA TAK KENA 😭 Cuba lagi!";
 
+        setTimeout(function() {
 
-        setTimeout(
-            function() {
+            arrow.style.display = "none";
 
-                arrow.style.display =
-                    "none";
+            button.disabled = false;
 
+            moveTarget();
 
-                button.disabled =
-                    false;
-
-
-                moveTarget();
-
-            },
-            600
-        );
-
+        },600);
     }
-
 }
 
 
-/* =====================================================
-   HIT EFFECT
-===================================================== */
+/* HIT EFFECT */
 
-function createHitEffect(
-    x,
-    y
-) {
+function createHitEffect(x,y) {
 
     const gameArea =
-        document.getElementById(
-            "gameArea"
-        );
+        document.getElementById("gameArea");
 
-
-    for (
-        let i = 0;
-        i < 8;
-        i++
-    ) {
+    for (let i=0; i<8; i++) {
 
         const heart =
-            document.createElement(
-                "div"
-            );
+            document.createElement("div");
 
+        heart.className = "hit-heart";
 
-        heart.className =
-            "hit-heart";
-
-
-        heart.innerHTML =
-            "❤️";
-
+        heart.innerHTML = "❤️";
 
         heart.style.left =
-            (
-                x +
-                Math.random() * 60 -
-                30
-            ) + "px";
-
+            (x + Math.random()*60 - 30) + "px";
 
         heart.style.top =
-            (
-                y +
-                Math.random() * 40 -
-                20
-            ) + "px";
+            (y + Math.random()*40 - 20) + "px";
 
+        gameArea.appendChild(heart);
 
-        gameArea.appendChild(
-            heart
-        );
-
-
-        setTimeout(
-            function() {
-
-                heart.remove();
-
-            },
-            1000
-        );
-
+        setTimeout(function() {
+            heart.remove();
+        },1000);
     }
-
 }
 
 
-/* =====================================================
-   WIN GAME
-===================================================== */
+/* WIN */
 
 function winGame() {
 
-    gameWon =
-        true;
-
+    gameWon = true;
 
     const winMessage =
-        document.getElementById(
-            "winMessage"
-        );
-
+        document.getElementById("winMessage");
 
     const button =
-        document.getElementById(
-            "shootButton"
-        );
-
+        document.getElementById("shootButton");
 
     const status =
-        document.getElementById(
-            "gameStatus"
-        );
+        document.getElementById("gameStatus");
 
-
-    button.disabled =
-        true;
-
+    button.disabled = true;
 
     status.innerHTML =
         "MISSION COMPLETE ❤️🏹";
 
-
-    winMessage.classList.add(
-        "show"
-    );
-
+    winMessage.classList.add("show");
 
     createConfetti();
-
 }
 
 
-/* =====================================================
-   CONFETTI
-===================================================== */
+/* CONFETTI */
 
 function createConfetti() {
 
     const emojis = [
-
         "❤️",
         "💗",
         "💖",
@@ -2436,304 +1528,163 @@ function createConfetti() {
         "✨",
         "🎉",
         "🏹"
-
     ];
 
-
-    for (
-        let i = 0;
-        i < 35;
-        i++
-    ) {
+    for (let i=0; i<35; i++) {
 
         const confetti =
-            document.createElement(
-                "div"
-            );
+            document.createElement("div");
 
-
-        confetti.className =
-            "confetti";
-
+        confetti.className = "confetti";
 
         confetti.innerHTML =
             emojis[
                 Math.floor(
-                    Math.random() *
-                    emojis.length
+                    Math.random()*emojis.length
                 )
             ];
 
-
         confetti.style.left =
-            Math.random() *
-            100 +
-            "vw";
-
+            Math.random()*100 + "vw";
 
         confetti.style.animationDuration =
-            (
-                1.5 +
-                Math.random() * 2
-            ) + "s";
-
+            (1.5 + Math.random()*2) + "s";
 
         confetti.style.animationDelay =
-            (
-                Math.random() * .8
-            ) + "s";
+            (Math.random()*.8) + "s";
 
+        document.body.appendChild(confetti);
 
-        document.body.appendChild(
-            confetti
-        );
-
-
-        setTimeout(
-            function() {
-
-                confetti.remove();
-
-            },
-            4000
-        );
-
+        setTimeout(function() {
+            confetti.remove();
+        },4000);
     }
-
 }
 
 
-/* =====================================================
-   CONTINUE TO LOCK
-===================================================== */
+/* CONTINUE */
 
 function continueAfterGame() {
 
     const locked =
-        document.getElementById(
-            "locked"
-        );
-
+        document.getElementById("locked");
 
     locked.scrollIntoView({
-
-        behavior:
-            "smooth",
-
-        block:
-            "start"
-
+        behavior:"smooth",
+        block:"start"
     });
-
 }
 
 
-/* =====================================================
-   PASSCODE
-===================================================== */
+/* PASSCODE */
 
-const correctPIN =
-    "100906";
+const correctPIN = "100906";
 
-
-let enteredPIN =
-    "";
-
+let enteredPIN = "";
 
 function pressKey(number) {
 
-    if (
-        enteredPIN.length >= 6
-    ) {
+    if (enteredPIN.length >= 6) {
         return;
     }
 
-
-    enteredPIN +=
-        number;
-
+    enteredPIN += number;
 
     updateDots();
 
-
-    if (
-        enteredPIN.length === 6
-    ) {
+    if (enteredPIN.length === 6) {
 
         setTimeout(
             checkPIN,
             180
         );
-
     }
-
 }
 
 
-/* =====================================================
-   UPDATE DOTS
-===================================================== */
+/* UPDATE DOTS */
 
 function updateDots() {
 
     const dots =
-        document.querySelectorAll(
-            ".dot"
-        );
+        document.querySelectorAll(".dot");
 
+    dots.forEach(function(dot,index) {
 
-    dots.forEach(
-        function(
-            dot,
-            index
-        ) {
+        if (index < enteredPIN.length) {
 
-            if (
-                index <
-                enteredPIN.length
-            ) {
+            dot.classList.add("filled");
 
-                dot.classList.add(
-                    "filled"
-                );
+        } else {
 
-            } else {
-
-                dot.classList.remove(
-                    "filled"
-                );
-
-            }
+            dot.classList.remove("filled");
 
         }
-    );
 
+    });
 }
 
 
-/* =====================================================
-   CHECK PIN
-===================================================== */
+/* CHECK PIN */
 
 function checkPIN() {
 
     const error =
-        document.getElementById(
-            "passcodeError"
-        );
-
+        document.getElementById("passcodeError");
 
     const lockedBox =
-        document.getElementById(
-            "lockedBox"
-        );
-
+        document.getElementById("lockedBox");
 
     const lockIcon =
-        document.getElementById(
-            "lockIcon"
-        );
-
+        document.getElementById("lockIcon");
 
     const secret =
-        document.getElementById(
-            "secretContent"
-        );
+        document.getElementById("secretContent");
 
+    if (enteredPIN === correctPIN) {
 
-    /* PASSWORD BETUL */
+        error.classList.remove("show");
 
-    if (
-        enteredPIN ===
-        correctPIN
-    ) {
+        lockIcon.innerHTML = "🔓";
 
-        error.classList.remove(
-            "show"
-        );
+        lockIcon.style.transform = "scale(1.2)";
 
+        setTimeout(function() {
 
-        lockIcon.innerHTML =
-            "🔓";
+            secret.style.display = "block";
 
+            setTimeout(function() {
 
-        lockIcon.style.transform =
-            "scale(1.2)";
+                secret.scrollIntoView({
+                    behavior:"smooth",
+                    block:"center"
+                });
 
+            },150);
 
-        setTimeout(
-            function() {
+        },500);
 
-                secret.style.display =
-                    "block";
+    } else {
 
+        error.classList.add("show");
 
-                setTimeout(
-                    function() {
-
-                        secret.scrollIntoView({
-
-                            behavior:
-                                "smooth",
-
-                            block:
-                                "center"
-
-                        });
-
-                    },
-                    150
-                );
-
-
-            },
-            500
-        );
-
-    }
-
-
-    /* PASSWORD SALAH */
-
-    else {
-
-        error.classList.add(
-            "show"
-        );
-
-
-        lockedBox.classList.remove(
-            "shake"
-        );
-
+        lockedBox.classList.remove("shake");
 
         void lockedBox.offsetWidth;
 
+        lockedBox.classList.add("shake");
 
-        lockedBox.classList.add(
-            "shake"
-        );
+        setTimeout(function() {
 
+            enteredPIN = "";
 
-        setTimeout(
-            function() {
+            updateDots();
 
-                enteredPIN =
-                    "";
-
-
-                updateDots();
-
-            },
-            600
-        );
-
+        },600);
     }
-
 }
 
 </script>
 
 </body>
-
 </html>
