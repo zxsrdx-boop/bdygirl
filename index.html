@@ -1231,12 +1231,14 @@ body {
         1s ease forwards;
 }
 
-#secretContent video {
+#secretContent iframe {
     width: 100%;
 
-    max-height: 70vh;
+    height: 70vh;
 
-    object-fit: contain;
+    min-height: 300px;
+
+    border: none;
 
     border-radius: 18px;
 
@@ -1372,6 +1374,11 @@ body {
         width: 90px;
         height: 135px;
     }
+
+    #secretContent iframe {
+        height: 56vw;
+        min-height: 220px;
+    }
 }
 
 @media(max-width:380px) {
@@ -1400,6 +1407,7 @@ body {
     .game-area {
         height: 370px;
     }
+
 }
 
 </style>
@@ -1422,7 +1430,6 @@ body {
             YOU GOT A MAIL !
         </div>
 
-
         <div
             class="envelope-area"
             onclick="openEnvelope()"
@@ -1442,7 +1449,6 @@ body {
             </div>
 
         </div>
-
 
         <div class="mail-hint">
             tap the envelope for the surprise...
@@ -1469,19 +1475,16 @@ body {
             FOR SOMEONE SPECIAL
         </div>
 
-
         <h1 class="birthday-title">
             HAPPY<br>
             BIRTHDAY
         </h1>
-
 
         <span class="heart">
             ♡
         </span>
 
     </div>
-
 
     <div class="scroll">
 
@@ -1498,7 +1501,7 @@ body {
 
 
 <!-- =====================================================
-     OUR MEMORIES — GIF
+     OUR MEMORIES
 ===================================================== -->
 
 <section id="memories">
@@ -1507,9 +1510,7 @@ body {
         Our Memories
     </h2>
 
-
     <div class="memory-grid">
-
 
         <div class="memory">
 
@@ -1608,7 +1609,6 @@ body {
 
         </div>
 
-
     </div>
 
 </section>
@@ -1625,22 +1625,18 @@ body {
         Batrisya's Love Mission 🏹
     </h2>
 
-
     <p class="game-subtitle">
         Misi: Batrisya kena tembak Aika dengan panah cinta ❤️
     </p>
-
 
     <div
         class="game-area"
         id="gameArea"
     >
 
-
         <div class="cloud one">
             ☁️
         </div>
-
 
         <div class="cloud two">
             ☁️
@@ -1701,11 +1697,9 @@ body {
                 💘
             </div>
 
-
             <div class="win-title">
                 YEYY! ❤️
             </div>
-
 
             <div class="win-text">
 
@@ -1717,7 +1711,6 @@ body {
 
             </div>
 
-
             <button
                 class="continue-button"
                 onclick="continueAfterGame()"
@@ -1726,7 +1719,6 @@ body {
             </button>
 
         </div>
-
 
     </div>
 
@@ -1761,7 +1753,6 @@ body {
         class="locked-box"
         id="lockedBox"
     >
-
 
         <div
             class="lock-icon"
@@ -1805,14 +1796,12 @@ body {
 
         <div class="keypad">
 
-
             <button
                 class="key"
                 onclick="pressKey('1')"
             >
                 1
             </button>
-
 
             <button
                 class="key"
@@ -1821,14 +1810,12 @@ body {
                 2
             </button>
 
-
             <button
                 class="key"
                 onclick="pressKey('3')"
             >
                 3
             </button>
-
 
             <button
                 class="key"
@@ -1837,14 +1824,12 @@ body {
                 4
             </button>
 
-
             <button
                 class="key"
                 onclick="pressKey('5')"
             >
                 5
             </button>
-
 
             <button
                 class="key"
@@ -1853,14 +1838,12 @@ body {
                 6
             </button>
 
-
             <button
                 class="key"
                 onclick="pressKey('7')"
             >
                 7
             </button>
-
 
             <button
                 class="key"
@@ -1869,7 +1852,6 @@ body {
                 8
             </button>
 
-
             <button
                 class="key"
                 onclick="pressKey('9')"
@@ -1877,14 +1859,12 @@ body {
                 9
             </button>
 
-
             <button
                 class="key zero"
                 onclick="pressKey('0')"
             >
                 0
             </button>
-
 
         </div>
 
@@ -1901,23 +1881,19 @@ body {
 
         <div id="secretContent">
 
+            <!-- YOUTUBE BIRTHDAY VIDEO -->
 
-            <video
+            <iframe
                 id="memoryVideo"
-                controls
-                playsinline
-                preload="metadata"
-            >
+                src="https://www.youtube.com/embed/pQ1So8ra1aQ"
+                title="Birthday Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
 
-                <source
-                    src="memory-video.mp4"
-                    type="video/mp4"
-                >
 
-                Your browser does not support video.
-
-            </video>
-
+            <!-- FINAL MESSAGE -->
 
             <div class="final-message">
 
@@ -1953,9 +1929,7 @@ body {
 
             </div>
 
-
         </div>
-
 
     </div>
 
