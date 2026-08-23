@@ -1091,45 +1091,23 @@ body {
         1s ease forwards;
 }
 
-/*
-   VIDEO FIX
-   - kekalkan nisbah asal 1920x1080
-   - jangan crop
-   - jangan paksa height
-   - sesuai iPhone
-*/
-
-.video-wrapper {
+#secretContent video {
     width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+    height: auto;
 
-    aspect-ratio: 16 / 9;
+    max-height: none;
 
-    overflow: hidden;
+    object-fit: contain;
+
+    display: block;
 
     border-radius: 18px;
 
-    background: #000;
+    background: black;
 
     box-shadow:
         0 15px 40px
         rgba(80,30,50,.3);
-}
-
-#secretContent video {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    object-position: center;
-
-    background: #000;
-
-    border-radius: 18px;
 }
 
 @keyframes secretAppear {
@@ -1254,16 +1232,6 @@ body {
     .target {
         width: 90px;
         height: 135px;
-    }
-
-    .video-wrapper {
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        border-radius: 14px;
-    }
-
-    #secretContent video {
-        border-radius: 14px;
     }
 }
 
@@ -1391,10 +1359,12 @@ body {
 
     <div class="memory-grid">
 
+        <!-- MEMORY 1 -->
+
         <div class="memory">
 
             <img
-                src="https://drive.google.com/uc?export=view&id=1JSEP7g-sdnx6CqYFOGr4lvP987YqwmMO"
+                src="https://www.dropbox.com/scl/fi/pfnu1mf7rq3y8tq92abob/memory1.gif?rlkey=nkpyrbk9ay73izgb7c028xouy&st=hklh9zr6&raw=1"
                 alt="Memory 1"
                 loading="lazy"
             >
@@ -1405,10 +1375,12 @@ body {
 
         </div>
 
+        <!-- MEMORY 2 -->
+
         <div class="memory">
 
             <img
-                src="https://drive.google.com/uc?export=view&id=1QexMIkV3JvLsp7UFiDlqIu6E8aEz2CVz"
+                src="https://www.dropbox.com/scl/fi/n8z28v6zqkgmj2m968ytj/memory2.gif?rlkey=frp1vg1rzu0jl0umv665gp3tu&st=1kj10oso&raw=1"
                 alt="Memory 2"
                 loading="lazy"
             >
@@ -1419,10 +1391,12 @@ body {
 
         </div>
 
+        <!-- MEMORY 3 -->
+
         <div class="memory">
 
             <img
-                src="https://drive.google.com/uc?export=view&id=1lPvxSAEH6eT87TYjyCMesWArps66aSgI"
+                src="https://www.dropbox.com/scl/fi/kqzif2chczuq4rq81kbm2/memory3.gif?rlkey=7y8ceovv17t7jqxg1lueplfl0&st=w98c7vbu&raw=1"
                 alt="Memory 3"
                 loading="lazy"
             >
@@ -1433,10 +1407,12 @@ body {
 
         </div>
 
+        <!-- MEMORY 4 -->
+
         <div class="memory">
 
             <img
-                src="https://drive.google.com/uc?export=view&id=1C5NWHrbsXXEZCMXf_JHHYk2BmdNMmhJ3"
+                src="https://www.dropbox.com/scl/fi/yg0g5cblddn4qwuqx2lj7/memory4.gif?rlkey=smj1la8m8glcqh35ibcpymzmi&st=kowg4rs8&raw=1"
                 alt="Memory 4"
                 loading="lazy"
             >
@@ -1447,10 +1423,12 @@ body {
 
         </div>
 
+        <!-- MEMORY 5 -->
+
         <div class="memory">
 
             <img
-                src="https://drive.google.com/uc?export=view&id=1UFyTvben_sD-wvdQpPptwr5oWTcBX8GI"
+                src="https://www.dropbox.com/scl/fi/do3wlo1ua4tnkset06e8y/memory5.gif?rlkey=vhoo2ckvqp0aoz133iuqzas66&st=3ogjeqjw&raw=1"
                 alt="Memory 5"
                 loading="lazy"
             >
@@ -1461,10 +1439,12 @@ body {
 
         </div>
 
+        <!-- MEMORY 6 -->
+
         <div class="memory">
 
             <img
-                src="https://drive.google.com/uc?export=view&id=1b35QFxwbeZhDA-Mo9ULk3zbdSLxzcPGj"
+                src="https://www.dropbox.com/scl/fi/a1wslclxc02lqasfamdqy/memory6.gif?rlkey=z19g61mfiwo2nmvjyb50beq76&st=uvyp1n5w&raw=1"
                 alt="Memory 6"
                 loading="lazy"
             >
@@ -1475,10 +1455,12 @@ body {
 
         </div>
 
+        <!-- MEMORY 7 -->
+
         <div class="memory">
 
             <img
-                src="https://drive.google.com/uc?export=view&id=1DpKj6SxVF5dumPIsQAH65AML1_CHbdZ0"
+                src="https://www.dropbox.com/scl/fi/mywfvfvuk64d9n371rmsk/memory7.gif?rlkey=9zv1n9yrs64s1xwni6ft0iivz&st=b8ex3jbj&raw=1"
                 alt="Memory 7"
                 loading="lazy"
             >
@@ -1520,6 +1502,8 @@ body {
             ☁️
         </div>
 
+        <!-- AIKA -->
+
         <div
             class="target"
             id="target"
@@ -1539,10 +1523,14 @@ body {
             ❤️
         </div>
 
+        <!-- ARROW -->
+
         <div
             class="love-arrow"
             id="loveArrow"
         ></div>
+
+        <!-- BATRISYA -->
 
         <div class="player">
 
@@ -1552,6 +1540,8 @@ body {
             >
 
         </div>
+
+        <!-- WIN -->
 
         <div
             class="win-message"
@@ -1642,6 +1632,8 @@ body {
 
         </div>
 
+        <!-- KEYPAD -->
+
         <div class="keypad">
 
             <button class="key" onclick="pressKey('1')">1</button>
@@ -1667,32 +1659,26 @@ body {
             Try again 🤭
         </div>
 
-        <!-- =================================================
-             SECRET VIDEO — CLOUDINARY
-        ================================================= -->
+        <!-- SECRET -->
 
         <div id="secretContent">
 
-            <div class="video-wrapper">
+            <video
+                id="memoryVideo"
+                controls
+                playsinline
+                webkit-playsinline
+                preload="metadata"
+            >
 
-                <video
-                    id="memoryVideo"
-                    controls
-                    playsinline
-                    webkit-playsinline
-                    preload="metadata"
+                <source
+                    src="https://res.cloudinary.com/ceii18cp/video/upload/v1/copy_A52AC52A-E0AB-4ECC-85F0-2C5655BAA68B-ezgif.com-mov-to-mp4-converter.mp4"
+                    type="video/mp4"
                 >
 
-                    <source
-                        src="https://res.cloudinary.com/ceii18cp/video/upload/c_limit,w_1920,q_auto,f_mp4/copy_A52AC52A-E0AB-4ECC-85F0-2C5655BAA68B-ezgif.com-mov-to-mp4-converter.mp4"
-                        type="video/mp4"
-                    >
+                Your browser does not support video.
 
-                    Your browser does not support video.
-
-                </video>
-
-            </div>
+            </video>
 
             <div class="final-message">
 
@@ -1736,7 +1722,7 @@ body {
 <script>
 
 /* =====================================================
-   OPENING
+   OPENING SCROLL LOCK
 ===================================================== */
 
 let envelopeOpened = false;
@@ -1858,7 +1844,7 @@ function moveTarget() {
 setInterval(moveTarget, 1700);
 
 /* =====================================================
-   SHOOT
+   SHOOT LOVE ARROW
 ===================================================== */
 
 function shootLoveArrow() {
@@ -2010,7 +1996,7 @@ function createHitEffect(x, y) {
 }
 
 /* =====================================================
-   WIN
+   WIN GAME
 ===================================================== */
 
 function winGame() {
@@ -2093,7 +2079,7 @@ function createConfetti() {
 }
 
 /* =====================================================
-   CONTINUE
+   CONTINUE TO LOCK
 ===================================================== */
 
 function continueAfterGame() {
@@ -2138,7 +2124,7 @@ function pressKey(number) {
 }
 
 /* =====================================================
-   DOTS
+   UPDATE DOTS
 ===================================================== */
 
 function updateDots() {
@@ -2180,9 +2166,6 @@ function checkPIN() {
     const secret =
         document.getElementById("secretContent");
 
-    const video =
-        document.getElementById("memoryVideo");
-
     if (enteredPIN === correctPIN) {
 
         error.classList.remove("show");
@@ -2195,13 +2178,6 @@ function checkPIN() {
         setTimeout(function() {
 
             secret.style.display = "block";
-
-            /*
-               Pastikan browser kira semula
-               saiz video selepas secret muncul.
-            */
-
-            video.load();
 
             setTimeout(function() {
 
