@@ -2,19 +2,12 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>Happy Birthday ❤️</title>
 
 <style>
-
-/* =====================================================
-   BASIC
-===================================================== */
 
 * {
     margin: 0;
@@ -42,7 +35,6 @@ body {
     position: fixed;
     inset: 0;
     z-index: 99999;
-
     background: #f8d7e3;
 
     display: flex;
@@ -70,14 +62,9 @@ body {
 
 .mail-title {
     color: #6d3048;
-
-    font-size:
-        clamp(25px, 7vw, 34px);
-
+    font-size: clamp(25px, 7vw, 34px);
     font-weight: bold;
-
     letter-spacing: 4px;
-
     margin-bottom: 35px;
 }
 
@@ -90,22 +77,16 @@ body {
     width: 330px;
     height: 220px;
     max-width: 85vw;
-
     margin: auto;
-
     position: relative;
-
     cursor: pointer;
-
     perspective: 900px;
 }
 
 .envelope {
     position: absolute;
     inset: 0;
-
     background: #c96f91;
-
     border-radius: 3px;
 
     box-shadow:
@@ -115,7 +96,6 @@ body {
 
 .envelope::before {
     content: "";
-
     position: absolute;
     inset: 0;
 
@@ -136,7 +116,6 @@ body {
 
 .flap {
     position: absolute;
-
     top: 0;
     left: 0;
 
@@ -163,7 +142,6 @@ body {
 
 .seal {
     position: absolute;
-
     left: 50%;
     top: 52%;
 
@@ -182,12 +160,10 @@ body {
         rgba(255,255,255,.35);
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
     font-size: 23px;
-
     z-index: 10;
 }
 
@@ -203,7 +179,6 @@ body {
 }
 
 @keyframes envelopeOut {
-
     100% {
         transform:
             translateY(-40px)
@@ -215,13 +190,9 @@ body {
 
 .mail-hint {
     color: #805066;
-
     margin-top: 20px;
-
     font-size: 13px;
-
     font-style: italic;
-
     opacity: .85;
 }
 
@@ -236,7 +207,6 @@ body {
     position: relative;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
@@ -277,7 +247,6 @@ body {
         clamp(12px,4vw,17px);
 
     letter-spacing: 5px;
-
     margin-bottom: 20px;
 
     text-shadow:
@@ -290,9 +259,7 @@ body {
         clamp(48px,13vw,100px);
 
     font-weight: 400;
-
     line-height: .95;
-
     letter-spacing: 2px;
 
     text-shadow:
@@ -302,9 +269,7 @@ body {
 
 .heart {
     display: block;
-
     margin-top: 25px;
-
     font-size: 34px;
 }
 
@@ -318,9 +283,7 @@ body {
         translateX(-50%);
 
     font-size: 12px;
-
     letter-spacing: 3px;
-
     opacity: .9;
 
     animation:
@@ -329,14 +292,11 @@ body {
 
 .scroll span {
     display: block;
-
     font-size: 25px;
-
     margin-top: 8px;
 }
 
 @keyframes bounce {
-
     0%,100% {
         transform:
             translate(-50%,0);
@@ -371,7 +331,6 @@ body {
         clamp(38px,10vw,65px);
 
     font-style: italic;
-
     font-weight: 400;
 
     margin-bottom: 60px;
@@ -383,9 +342,7 @@ body {
 
 .memory-grid {
     width: 100%;
-
     max-width: 850px;
-
     margin: auto;
 
     display: grid;
@@ -426,12 +383,7 @@ body {
     z-index: 5;
 }
 
-
-/* =====================================================
-   GOOGLE DRIVE IMAGES
-===================================================== */
-
-.memory-image {
+.memory img {
     width: 100%;
 
     aspect-ratio: 1 / 1;
@@ -439,16 +391,7 @@ body {
     object-fit: cover;
 
     display: block;
-
-    background: #f1dce5;
-
-    border: none;
 }
-
-
-/* =====================================================
-   CAPTION
-===================================================== */
 
 .caption {
     color: #633044;
@@ -520,7 +463,6 @@ body {
         clamp(34px,9vw,55px);
 
     font-weight: 400;
-
     margin-bottom: 8px;
 }
 
@@ -541,9 +483,7 @@ body {
 
 .game-area {
     width: 100%;
-
     max-width: 430px;
-
     height: 430px;
 
     margin: auto;
@@ -604,7 +544,6 @@ body {
 }
 
 @keyframes cloudMove {
-
     from {
         transform:
             translateX(-20px);
@@ -664,7 +603,6 @@ body {
     position: absolute;
 
     top: 25px;
-
     left: 50%;
 
     transform:
@@ -680,7 +618,6 @@ body {
 }
 
 @keyframes heartFloat {
-
     0%,100% {
         transform:
             translate(-50%,0);
@@ -790,7 +727,6 @@ body {
 }
 
 @keyframes hitHeart {
-
     0% {
         opacity: 1;
 
@@ -948,7 +884,6 @@ body {
 }
 
 @keyframes winAppear {
-
     from {
         opacity: 0;
 
@@ -965,7 +900,6 @@ body {
 }
 
 @keyframes winBounce {
-
     from {
         transform:
             translateY(0)
@@ -1001,7 +935,6 @@ body {
 }
 
 @keyframes confettiFall {
-
     to {
         transform:
             translateY(110vh)
@@ -1211,7 +1144,6 @@ body {
 }
 
 @keyframes shake {
-
     0%,100% {
         transform:
             translateX(0);
@@ -1231,9 +1163,6 @@ body {
 
 /* =====================================================
    SECRET VIDEO
-   GOOGLE DRIVE PREVIEW
-   ORIGINAL = 1920 x 1080
-   RATIO = 16:9
 ===================================================== */
 
 #secretContent {
@@ -1249,18 +1178,18 @@ body {
 }
 
 
-/* VIDEO FRAME */
+/* 16:9 VIDEO CONTAINER */
 
 .video-wrapper {
-    position: relative;
-
     width: 100%;
 
     max-width: 900px;
 
-    margin: 0 auto;
+    margin:
+        0 auto;
 
-    aspect-ratio: 16 / 9;
+    aspect-ratio:
+        16 / 9;
 
     overflow: hidden;
 
@@ -1274,35 +1203,33 @@ body {
 }
 
 
-/* GOOGLE DRIVE IFRAME */
+/* YOUTUBE IFRAME */
 
 .video-wrapper iframe {
-    position: absolute;
-
-    inset: 0;
-
     width: 100%;
-
     height: 100%;
-
-    border: 0;
 
     display: block;
 
-    background: #000;
+    border: 0;
 }
 
+@keyframes secretAppear {
+    from {
+        opacity: 0;
 
-@media(max-width:650px) {
-
-    .video-wrapper {
-        width: 100%;
-
-        aspect-ratio: 16 / 9;
-
-        border-radius: 14px;
+        transform:
+            translateY(30px)
+            scale(.95);
     }
 
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
 }
 
 
@@ -1353,7 +1280,6 @@ body {
 }
 
 @keyframes finalMessageIn {
-
     from {
         opacity: 0;
 
@@ -1411,6 +1337,11 @@ body {
         width: 90px;
         height: 135px;
     }
+
+    .video-wrapper {
+        width: 100%;
+        border-radius: 14px;
+    }
 }
 
 @media(max-width:380px) {
@@ -1442,7 +1373,6 @@ body {
 }
 
 </style>
-
 </head>
 
 
@@ -1545,15 +1475,13 @@ body {
     <div class="memory-grid">
 
 
-        <!-- 1 -->
+        <!-- MEMORY 1 -->
 
         <div class="memory">
 
             <img
-                class="memory-image"
-                src="https://drive.google.com/thumbnail?id=1JSEP7g-sdnx6CqYFOGr4lvP987YqwmMO&sz=w1000"
-                alt="dr dungun ni nk meet"
-                loading="lazy"
+                src="https://drive.google.com/uc?export=view&id=1JSEP7g-sdnx6CqYFOGr4lvP987YqwmMO"
+                alt="Memory 1"
             >
 
             <div class="caption">
@@ -1563,15 +1491,13 @@ body {
         </div>
 
 
-        <!-- 2 -->
+        <!-- MEMORY 2 -->
 
         <div class="memory">
 
             <img
-                class="memory-image"
-                src="https://drive.google.com/thumbnail?id=1QexMIkV3JvLsp7UFiDlqIu6E8aEz2CVz&sz=w1000"
-                alt="weng weng main brek cikit"
-                loading="lazy"
+                src="https://drive.google.com/uc?export=view&id=1QexMIkV3JvLsp7UFiDlqIu6E8aEz2CVz"
+                alt="Memory 2"
             >
 
             <div class="caption">
@@ -1581,15 +1507,13 @@ body {
         </div>
 
 
-        <!-- 3 -->
+        <!-- MEMORY 3 -->
 
         <div class="memory">
 
             <img
-                class="memory-image"
-                src="https://drive.google.com/thumbnail?id=1lPvxSAEH6eT87TYjyCMesWArps66aSgI&sz=w1000"
-                alt="GEDIKK"
-                loading="lazy"
+                src="https://drive.google.com/uc?export=view&id=1lPvxSAEH6eT87TYjyCMesWArps66aSgI"
+                alt="Memory 3"
             >
 
             <div class="caption">
@@ -1599,15 +1523,13 @@ body {
         </div>
 
 
-        <!-- 4 -->
+        <!-- MEMORY 4 -->
 
         <div class="memory">
 
             <img
-                class="memory-image"
-                src="https://drive.google.com/thumbnail?id=1C5NWHrbsXXEZCMXf_JHHYk2BmdNMmhJ3&sz=w1000"
-                alt="main arcade came ii"
-                loading="lazy"
+                src="https://drive.google.com/uc?export=view&id=1C5NWHrbsXXEZCMXf_JHHYk2BmdNMmhJ3"
+                alt="Memory 4"
             >
 
             <div class="caption">
@@ -1617,15 +1539,13 @@ body {
         </div>
 
 
-        <!-- 5 -->
+        <!-- MEMORY 5 -->
 
         <div class="memory">
 
             <img
-                class="memory-image"
-                src="https://drive.google.com/thumbnail?id=1UFyTvben_sD-wvdQpPptwr5oWTcBX8GI&sz=w1000"
-                alt="YEY DPT BAG"
-                loading="lazy"
+                src="https://drive.google.com/uc?export=view&id=1UFyTvben_sD-wvdQpPptwr5oWTcBX8GI"
+                alt="Memory 5"
             >
 
             <div class="caption">
@@ -1635,15 +1555,13 @@ body {
         </div>
 
 
-        <!-- 6 -->
+        <!-- MEMORY 6 -->
 
         <div class="memory">
 
             <img
-                class="memory-image"
-                src="https://drive.google.com/thumbnail?id=1b35QFxwbeZhDA-Mo9ULk3zbdSLxzcPGj&sz=w1000"
-                alt="buat tiktok came ii"
-                loading="lazy"
+                src="https://drive.google.com/uc?export=view&id=1b35QFxwbeZhDA-Mo9ULk3zbdSLxzcPGj"
+                alt="Memory 6"
             >
 
             <div class="caption">
@@ -1653,15 +1571,13 @@ body {
         </div>
 
 
-        <!-- 7 -->
+        <!-- MEMORY 7 -->
 
         <div class="memory">
 
             <img
-                class="memory-image"
-                src="https://drive.google.com/thumbnail?id=1DpKj6SxVF5dumPIsQAH65AML1_CHbdZ0&sz=w1000"
-                alt="ehek buat lopee"
-                loading="lazy"
+                src="https://drive.google.com/uc?export=view&id=1DpKj6SxVF5dumPIsQAH65AML1_CHbdZ0"
+                alt="Memory 7"
             >
 
             <div class="caption">
@@ -1688,7 +1604,7 @@ body {
     </h2>
 
     <p class="game-subtitle">
-        Misi: awak kene tembak sy biar kene.
+        awak kene tembak sy biar kene.
     </p>
 
 
@@ -1760,18 +1676,15 @@ body {
                 💘
             </div>
 
-
             <div class="win-title">
                 TEPAT SASARAN
             </div>
-
 
             <div class="win-text">
 
                 OFFICIAL SY MILIK CAYANG🤍🙈
 
             </div>
-
 
             <button
                 class="continue-button"
@@ -1782,7 +1695,6 @@ body {
 
         </div>
 
-
     </div>
 
 
@@ -1791,7 +1703,7 @@ body {
         id="shootButton"
         onclick="shootLoveArrow()"
     >
-        SHOOT💘
+        🏹 SHOOT💘
     </button>
 
 
@@ -1940,24 +1852,27 @@ body {
         </div>
 
 
-        <!-- =================================================
-             SECRET VIDEO
-        ================================================= -->
+        <!-- SECRET -->
 
         <div id="secretContent">
 
 
+            <!-- YOUTUBE VIDEO -->
+
             <div class="video-wrapper">
 
                 <iframe
-                    src="https://drive.google.com/file/d/1gJ_UAsDqbj_5ZOkD6JgoR0OtTXGEEXoe/preview"
-                    allow="autoplay; fullscreen"
-                    allowfullscreen
-                    title="Birthday Memory Video"
-                ></iframe>
+                    src="https://www.youtube-nocookie.com/embed/pQ1So8ra1aQ?rel=0&modestbranding=1&playsinline=1"
+                    title="Birthday Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
 
             </div>
 
+
+            <!-- FINAL MESSAGE -->
 
             <div class="final-message">
 
@@ -1970,7 +1885,7 @@ body {
 
                     Terima kasih sayang dah hadir dalam
                     hidup sy and buat bnyk kenangan
-                    dengan sy selama ni🥺.
+                    dengan sy selama ni🥺
 
                     <br><br>
 
@@ -1997,7 +1912,6 @@ body {
 
         </div>
 
-
     </div>
 
 </section>
@@ -2012,52 +1926,29 @@ body {
 
 let envelopeOpened = false;
 
-
-if (
-    "scrollRestoration"
-    in history
-) {
-
-    history.scrollRestoration =
-        "manual";
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
 }
 
+window.scrollTo(0, 0);
 
-window.scrollTo(
-    0,
-    0
-);
-
-
-document.body.style.overflow =
-    "hidden";
-
-document.documentElement.style.overflow =
-    "hidden";
+document.body.style.overflow = "hidden";
+document.documentElement.style.overflow = "hidden";
 
 
-const forceTop =
-    setInterval(
-        function() {
+const forceTop = setInterval(function() {
 
-            if (!envelopeOpened) {
+    if (!envelopeOpened) {
 
-                window.scrollTo(
-                    0,
-                    0
-                );
+        window.scrollTo(0, 0);
 
-            } else {
+    } else {
 
-                clearInterval(
-                    forceTop
-                );
+        clearInterval(forceTop);
 
-            }
+    }
 
-        },
-        50
-    );
+}, 50);
 
 
 document.addEventListener(
@@ -2065,9 +1956,7 @@ document.addEventListener(
     function(event) {
 
         if (!envelopeOpened) {
-
             event.preventDefault();
-
         }
 
     },
@@ -2082,9 +1971,7 @@ document.addEventListener(
     function(event) {
 
         if (!envelopeOpened) {
-
             event.preventDefault();
-
         }
 
     },
@@ -2104,63 +1991,33 @@ function openEnvelope() {
         return;
     }
 
-
     const envelope =
-        document.getElementById(
-            "envelope"
-        );
-
+        document.getElementById("envelope");
 
     const opening =
-        document.getElementById(
-            "opening"
-        );
-
+        document.getElementById("opening");
 
     const birthdayContent =
-        document.getElementById(
-            "birthdayContent"
-        );
+        document.getElementById("birthdayContent");
 
 
-    window.scrollTo(
-        0,
-        0
-    );
+    window.scrollTo(0, 0);
+
+    envelopeOpened = true;
+
+    envelope.classList.add("open");
 
 
-    envelopeOpened =
-        true;
+    setTimeout(function() {
 
+        opening.classList.add("hide");
 
-    envelope.classList.add(
-        "open"
-    );
+        document.body.style.overflow = "auto";
+        document.documentElement.style.overflow = "auto";
 
+        birthdayContent.classList.add("show");
 
-    setTimeout(
-        function() {
-
-            opening.classList.add(
-                "hide"
-            );
-
-
-            document.body.style.overflow =
-                "auto";
-
-
-            document.documentElement.style.overflow =
-                "auto";
-
-
-            birthdayContent.classList.add(
-                "show"
-            );
-
-        },
-        1300
-    );
+    }, 1300);
 
 }
 
@@ -2170,7 +2027,6 @@ function openEnvelope() {
 ===================================================== */
 
 let gameWon = false;
-
 let targetPosition = 50;
 
 
@@ -2180,28 +2036,19 @@ function moveTarget() {
         return;
     }
 
-
     const target =
-        document.getElementById(
-            "target"
-        );
-
+        document.getElementById("target");
 
     const targetHeart =
-        document.getElementById(
-            "targetHeart"
-        );
+        document.getElementById("targetHeart");
 
 
     targetPosition =
-        Math.floor(
-            Math.random() * 60
-        ) + 20;
+        Math.floor(Math.random() * 60) + 20;
 
 
     target.style.left =
         targetPosition + "%";
-
 
     targetHeart.style.left =
         targetPosition + "%";
@@ -2209,10 +2056,7 @@ function moveTarget() {
 }
 
 
-setInterval(
-    moveTarget,
-    1700
-);
+setInterval(moveTarget, 1700);
 
 
 /* =====================================================
@@ -2227,42 +2071,26 @@ function shootLoveArrow() {
 
 
     const arrow =
-        document.getElementById(
-            "loveArrow"
-        );
-
+        document.getElementById("loveArrow");
 
     const target =
-        document.getElementById(
-            "target"
-        );
-
+        document.getElementById("target");
 
     const gameArea =
-        document.getElementById(
-            "gameArea"
-        );
-
+        document.getElementById("gameArea");
 
     const button =
-        document.getElementById(
-            "shootButton"
-        );
-
+        document.getElementById("shootButton");
 
     const status =
-        document.getElementById(
-            "gameStatus"
-        );
+        document.getElementById("gameStatus");
 
 
-    button.disabled =
-        true;
+    button.disabled = true;
 
 
     const areaRect =
         gameArea.getBoundingClientRect();
-
 
     const targetRect =
         target.getBoundingClientRect();
@@ -2270,7 +2098,6 @@ function shootLoveArrow() {
 
     const shooterX =
         areaRect.width / 2;
-
 
     const shooterY =
         areaRect.height - 80;
@@ -2280,7 +2107,6 @@ function shootLoveArrow() {
         targetRect.left -
         areaRect.left +
         targetRect.width / 2;
-
 
     const targetY =
         targetRect.top -
@@ -2295,15 +2121,10 @@ function shootLoveArrow() {
         );
 
 
-    arrow.style.display =
-        "block";
-
+    arrow.style.display = "block";
 
     arrow.style.left =
-        (
-            shooterX - 45
-        ) + "px";
-
+        (shooterX - 45) + "px";
 
     arrow.style.top =
         shooterY + "px";
@@ -2320,37 +2141,27 @@ function shootLoveArrow() {
 
 
     arrow.style.transform =
-        "rotate(" +
-        angle +
-        "deg)";
+        "rotate(" + angle + "deg)";
 
 
-    if (
-        difference < 95
-    ) {
+    if (difference < 95) {
 
         status.innerHTML =
             "💘 KENA! AIKA DAH KENA PANAH CINTA! ❤️";
 
 
-        setTimeout(
-            function() {
+        setTimeout(function() {
 
-                arrow.style.display =
-                    "none";
+            arrow.style.display = "none";
 
+            createHitEffect(
+                targetX,
+                targetY
+            );
 
-                createHitEffect(
-                    targetX,
-                    targetY
-                );
+            winGame();
 
-
-                winGame();
-
-            },
-            500
-        );
+        }, 500);
 
     }
 
@@ -2360,22 +2171,15 @@ function shootLoveArrow() {
             "HAHAHA TAK KENA 😭 Cuba lagi!";
 
 
-        setTimeout(
-            function() {
+        setTimeout(function() {
 
-                arrow.style.display =
-                    "none";
+            arrow.style.display = "none";
 
+            button.disabled = false;
 
-                button.disabled =
-                    false;
+            moveTarget();
 
-
-                moveTarget();
-
-            },
-            600
-        );
+        }, 600);
 
     }
 
@@ -2386,32 +2190,20 @@ function shootLoveArrow() {
    HIT EFFECT
 ===================================================== */
 
-function createHitEffect(
-    x,
-    y
-) {
+function createHitEffect(x, y) {
 
     const gameArea =
-        document.getElementById(
-            "gameArea"
-        );
+        document.getElementById("gameArea");
 
 
-    for (
-        let i = 0;
-        i < 8;
-        i++
-    ) {
+    for (let i = 0; i < 8; i++) {
 
         const heart =
-            document.createElement(
-                "div"
-            );
+            document.createElement("div");
 
 
         heart.className =
             "hit-heart";
-
 
         heart.innerHTML =
             "❤️";
@@ -2433,19 +2225,14 @@ function createHitEffect(
             ) + "px";
 
 
-        gameArea.appendChild(
-            heart
-        );
+        gameArea.appendChild(heart);
 
 
-        setTimeout(
-            function() {
+        setTimeout(function() {
 
-                heart.remove();
+            heart.remove();
 
-            },
-            1000
-        );
+        }, 1000);
 
     }
 
@@ -2458,39 +2245,27 @@ function createHitEffect(
 
 function winGame() {
 
-    gameWon =
-        true;
+    gameWon = true;
 
 
     const winMessage =
-        document.getElementById(
-            "winMessage"
-        );
-
+        document.getElementById("winMessage");
 
     const button =
-        document.getElementById(
-            "shootButton"
-        );
-
+        document.getElementById("shootButton");
 
     const status =
-        document.getElementById(
-            "gameStatus"
-        );
+        document.getElementById("gameStatus");
 
 
-    button.disabled =
-        true;
+    button.disabled = true;
 
 
     status.innerHTML =
         "MISSION COMPLETE ❤️🏹";
 
 
-    winMessage.classList.add(
-        "show"
-    );
+    winMessage.classList.add("show");
 
 
     createConfetti();
@@ -2505,7 +2280,6 @@ function winGame() {
 function createConfetti() {
 
     const emojis = [
-
         "❤️",
         "💗",
         "💖",
@@ -2513,20 +2287,13 @@ function createConfetti() {
         "✨",
         "🎉",
         "🏹"
-
     ];
 
 
-    for (
-        let i = 0;
-        i < 35;
-        i++
-    ) {
+    for (let i = 0; i < 35; i++) {
 
         const confetti =
-            document.createElement(
-                "div"
-            );
+            document.createElement("div");
 
 
         confetti.className =
@@ -2543,9 +2310,7 @@ function createConfetti() {
 
 
         confetti.style.left =
-            Math.random() *
-            100 +
-            "vw";
+            Math.random() * 100 + "vw";
 
 
         confetti.style.animationDuration =
@@ -2561,19 +2326,14 @@ function createConfetti() {
             ) + "s";
 
 
-        document.body.appendChild(
-            confetti
-        );
+        document.body.appendChild(confetti);
 
 
-        setTimeout(
-            function() {
+        setTimeout(function() {
 
-                confetti.remove();
+            confetti.remove();
 
-            },
-            4000
-        );
+        }, 4000);
 
     }
 
@@ -2587,18 +2347,14 @@ function createConfetti() {
 function continueAfterGame() {
 
     const locked =
-        document.getElementById(
-            "locked"
-        );
+        document.getElementById("locked");
 
 
     locked.scrollIntoView({
 
-        behavior:
-            "smooth",
+        behavior: "smooth",
 
-        block:
-            "start"
+        block: "start"
 
     });
 
@@ -2612,30 +2368,23 @@ function continueAfterGame() {
 const correctPIN =
     "100906";
 
-
 let enteredPIN =
     "";
 
 
 function pressKey(number) {
 
-    if (
-        enteredPIN.length >= 6
-    ) {
+    if (enteredPIN.length >= 6) {
         return;
     }
 
 
-    enteredPIN +=
-        number;
-
+    enteredPIN += number;
 
     updateDots();
 
 
-    if (
-        enteredPIN.length === 6
-    ) {
+    if (enteredPIN.length === 6) {
 
         setTimeout(
             checkPIN,
@@ -2654,36 +2403,22 @@ function pressKey(number) {
 function updateDots() {
 
     const dots =
-        document.querySelectorAll(
-            ".dot"
-        );
+        document.querySelectorAll(".dot");
 
 
-    dots.forEach(
-        function(
-            dot,
-            index
-        ) {
+    dots.forEach(function(dot, index) {
 
-            if (
-                index <
-                enteredPIN.length
-            ) {
+        if (index < enteredPIN.length) {
 
-                dot.classList.add(
-                    "filled"
-                );
+            dot.classList.add("filled");
 
-            } else {
+        } else {
 
-                dot.classList.remove(
-                    "filled"
-                );
-
-            }
+            dot.classList.remove("filled");
 
         }
-    );
+
+    });
 
 }
 
@@ -2695,77 +2430,50 @@ function updateDots() {
 function checkPIN() {
 
     const error =
-        document.getElementById(
-            "passcodeError"
-        );
-
+        document.getElementById("passcodeError");
 
     const lockedBox =
-        document.getElementById(
-            "lockedBox"
-        );
-
+        document.getElementById("lockedBox");
 
     const lockIcon =
-        document.getElementById(
-            "lockIcon"
-        );
-
+        document.getElementById("lockIcon");
 
     const secret =
-        document.getElementById(
-            "secretContent"
-        );
+        document.getElementById("secretContent");
 
 
     /* PASSWORD BETUL */
 
-    if (
-        enteredPIN ===
-        correctPIN
-    ) {
+    if (enteredPIN === correctPIN) {
 
-        error.classList.remove(
-            "show"
-        );
-
+        error.classList.remove("show");
 
         lockIcon.innerHTML =
             "🔓";
-
 
         lockIcon.style.transform =
             "scale(1.2)";
 
 
-        setTimeout(
-            function() {
+        setTimeout(function() {
 
-                secret.style.display =
-                    "block";
-
-
-                setTimeout(
-                    function() {
-
-                        secret.scrollIntoView({
-
-                            behavior:
-                                "smooth",
-
-                            block:
-                                "center"
-
-                        });
-
-                    },
-                    150
-                );
+            secret.style.display =
+                "block";
 
 
-            },
-            500
-        );
+            setTimeout(function() {
+
+                secret.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "center"
+
+                });
+
+            }, 150);
+
+        }, 500);
 
     }
 
@@ -2774,36 +2482,23 @@ function checkPIN() {
 
     else {
 
-        error.classList.add(
-            "show"
-        );
+        error.classList.add("show");
 
 
-        lockedBox.classList.remove(
-            "shake"
-        );
-
+        lockedBox.classList.remove("shake");
 
         void lockedBox.offsetWidth;
 
-
-        lockedBox.classList.add(
-            "shake"
-        );
+        lockedBox.classList.add("shake");
 
 
-        setTimeout(
-            function() {
+        setTimeout(function() {
 
-                enteredPIN =
-                    "";
+            enteredPIN = "";
 
+            updateDots();
 
-                updateDots();
-
-            },
-            600
-        );
+        }, 600);
 
     }
 
@@ -2812,5 +2507,4 @@ function checkPIN() {
 </script>
 
 </body>
-
 </html>
