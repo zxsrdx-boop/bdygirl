@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>Happy Birthday ❤️</title>
 
 <style>
+
+/* =====================================================
+   BASIC
+===================================================== */
 
 * {
     margin: 0;
@@ -35,6 +42,7 @@ body {
     position: fixed;
     inset: 0;
     z-index: 99999;
+
     background: #f8d7e3;
 
     display: flex;
@@ -62,9 +70,14 @@ body {
 
 .mail-title {
     color: #6d3048;
-    font-size: clamp(25px, 7vw, 34px);
+
+    font-size:
+        clamp(25px, 7vw, 34px);
+
     font-weight: bold;
+
     letter-spacing: 4px;
+
     margin-bottom: 35px;
 }
 
@@ -77,16 +90,22 @@ body {
     width: 330px;
     height: 220px;
     max-width: 85vw;
+
     margin: auto;
+
     position: relative;
+
     cursor: pointer;
+
     perspective: 900px;
 }
 
 .envelope {
     position: absolute;
     inset: 0;
+
     background: #c96f91;
+
     border-radius: 3px;
 
     box-shadow:
@@ -96,6 +115,7 @@ body {
 
 .envelope::before {
     content: "";
+
     position: absolute;
     inset: 0;
 
@@ -116,6 +136,7 @@ body {
 
 .flap {
     position: absolute;
+
     top: 0;
     left: 0;
 
@@ -142,6 +163,7 @@ body {
 
 .seal {
     position: absolute;
+
     left: 50%;
     top: 52%;
 
@@ -160,10 +182,12 @@ body {
         rgba(255,255,255,.35);
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
     font-size: 23px;
+
     z-index: 10;
 }
 
@@ -179,6 +203,7 @@ body {
 }
 
 @keyframes envelopeOut {
+
     100% {
         transform:
             translateY(-40px)
@@ -190,9 +215,13 @@ body {
 
 .mail-hint {
     color: #805066;
+
     margin-top: 20px;
+
     font-size: 13px;
+
     font-style: italic;
+
     opacity: .85;
 }
 
@@ -207,6 +236,7 @@ body {
     position: relative;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
@@ -247,6 +277,7 @@ body {
         clamp(12px,4vw,17px);
 
     letter-spacing: 5px;
+
     margin-bottom: 20px;
 
     text-shadow:
@@ -259,7 +290,9 @@ body {
         clamp(48px,13vw,100px);
 
     font-weight: 400;
+
     line-height: .95;
+
     letter-spacing: 2px;
 
     text-shadow:
@@ -269,7 +302,9 @@ body {
 
 .heart {
     display: block;
+
     margin-top: 25px;
+
     font-size: 34px;
 }
 
@@ -283,7 +318,9 @@ body {
         translateX(-50%);
 
     font-size: 12px;
+
     letter-spacing: 3px;
+
     opacity: .9;
 
     animation:
@@ -292,11 +329,14 @@ body {
 
 .scroll span {
     display: block;
+
     font-size: 25px;
+
     margin-top: 8px;
 }
 
 @keyframes bounce {
+
     0%,100% {
         transform:
             translate(-50%,0);
@@ -310,7 +350,7 @@ body {
 
 
 /* =====================================================
-   MEMORIES
+   OUR MEMORIES
 ===================================================== */
 
 #memories {
@@ -331,6 +371,7 @@ body {
         clamp(38px,10vw,65px);
 
     font-style: italic;
+
     font-weight: 400;
 
     margin-bottom: 60px;
@@ -342,7 +383,9 @@ body {
 
 .memory-grid {
     width: 100%;
+
     max-width: 850px;
+
     margin: auto;
 
     display: grid;
@@ -391,6 +434,8 @@ body {
     object-fit: cover;
 
     display: block;
+
+    background: #f0dbe3;
 }
 
 .caption {
@@ -463,6 +508,7 @@ body {
         clamp(34px,9vw,55px);
 
     font-weight: 400;
+
     margin-bottom: 8px;
 }
 
@@ -483,7 +529,9 @@ body {
 
 .game-area {
     width: 100%;
+
     max-width: 430px;
+
     height: 430px;
 
     margin: auto;
@@ -544,6 +592,7 @@ body {
 }
 
 @keyframes cloudMove {
+
     from {
         transform:
             translateX(-20px);
@@ -603,6 +652,7 @@ body {
     position: absolute;
 
     top: 25px;
+
     left: 50%;
 
     transform:
@@ -618,6 +668,7 @@ body {
 }
 
 @keyframes heartFloat {
+
     0%,100% {
         transform:
             translate(-50%,0);
@@ -727,6 +778,7 @@ body {
 }
 
 @keyframes hitHeart {
+
     0% {
         opacity: 1;
 
@@ -884,6 +936,7 @@ body {
 }
 
 @keyframes winAppear {
+
     from {
         opacity: 0;
 
@@ -900,6 +953,7 @@ body {
 }
 
 @keyframes winBounce {
+
     from {
         transform:
             translateY(0)
@@ -935,6 +989,7 @@ body {
 }
 
 @keyframes confettiFall {
+
     to {
         transform:
             translateY(110vh)
@@ -971,7 +1026,7 @@ body {
 .locked-box {
     width: 100%;
 
-    max-width: 420px;
+    max-width: 900px;
 
     display: flex;
 
@@ -1144,6 +1199,7 @@ body {
 }
 
 @keyframes shake {
+
     0%,100% {
         transform:
             translateX(0);
@@ -1178,7 +1234,11 @@ body {
 }
 
 
-/* 16:9 VIDEO CONTAINER */
+/*
+   IMPORTANT:
+   Video asal 1920x1080 = 16:9.
+   Jangan guna object-fit: cover.
+*/
 
 .video-wrapper {
     width: 100%;
@@ -1186,50 +1246,30 @@ body {
     max-width: 900px;
 
     margin:
-        0 auto;
+        0 auto 50px;
 
-    aspect-ratio:
-        16 / 9;
+    padding:
+        0 10px;
+}
 
-    overflow: hidden;
+.video-wrapper video {
+    display: block;
 
-    border-radius: 18px;
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: contain;
 
     background: #000;
 
+    border-radius: 18px;
+
     box-shadow:
         0 15px 40px
-        rgba(80,30,50,.3);
-}
-
-
-/* YOUTUBE IFRAME */
-
-.video-wrapper iframe {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    border: 0;
-}
-
-@keyframes secretAppear {
-    from {
-        opacity: 0;
-
-        transform:
-            translateY(30px)
-            scale(.95);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-    }
+        rgba(80,30,50,.30);
 }
 
 
@@ -1238,7 +1278,7 @@ body {
 ===================================================== */
 
 .final-message {
-    margin-top: 50px;
+    margin-top: 10px;
 
     padding:
         0 10px 30px;
@@ -1279,7 +1319,27 @@ body {
     font-style: italic;
 }
 
+@keyframes secretAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
 @keyframes finalMessageIn {
+
     from {
         opacity: 0;
 
@@ -1339,8 +1399,18 @@ body {
     }
 
     .video-wrapper {
+        padding: 0 8px;
+    }
+
+    .video-wrapper video {
         width: 100%;
-        border-radius: 14px;
+        height: auto;
+
+        aspect-ratio: 16 / 9;
+
+        object-fit: contain;
+
+        border-radius: 16px;
     }
 }
 
@@ -1373,6 +1443,7 @@ body {
 }
 
 </style>
+
 </head>
 
 
@@ -1420,7 +1491,6 @@ body {
 </section>
 
 
-
 <!-- =====================================================
      HAPPY BIRTHDAY
 ===================================================== -->
@@ -1460,9 +1530,8 @@ body {
 </section>
 
 
-
 <!-- =====================================================
-     OUR MEMORIES
+     MEMORIES
 ===================================================== -->
 
 <section id="memories">
@@ -1470,7 +1539,6 @@ body {
     <h2 class="memories-title">
         gambaa tite🙈
     </h2>
-
 
     <div class="memory-grid">
 
@@ -1481,7 +1549,8 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1JSEP7g-sdnx6CqYFOGr4lvP987YqwmMO"
-                alt="Memory 1"
+                alt="dr dungun ni nk meet"
+                loading="eager"
             >
 
             <div class="caption">
@@ -1497,7 +1566,8 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1QexMIkV3JvLsp7UFiDlqIu6E8aEz2CVz"
-                alt="Memory 2"
+                alt="weng weng main brek cikit"
+                loading="eager"
             >
 
             <div class="caption">
@@ -1513,7 +1583,8 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1lPvxSAEH6eT87TYjyCMesWArps66aSgI"
-                alt="Memory 3"
+                alt="GEDIKK"
+                loading="eager"
             >
 
             <div class="caption">
@@ -1529,7 +1600,8 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1C5NWHrbsXXEZCMXf_JHHYk2BmdNMmhJ3"
-                alt="Memory 4"
+                alt="main arcade came ii"
+                loading="eager"
             >
 
             <div class="caption">
@@ -1545,7 +1617,8 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1UFyTvben_sD-wvdQpPptwr5oWTcBX8GI"
-                alt="Memory 5"
+                alt="YEY DPT BAG"
+                loading="eager"
             >
 
             <div class="caption">
@@ -1561,7 +1634,8 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1b35QFxwbeZhDA-Mo9ULk3zbdSLxzcPGj"
-                alt="Memory 6"
+                alt="buat tiktok came ii"
+                loading="eager"
             >
 
             <div class="caption">
@@ -1577,7 +1651,8 @@ body {
 
             <img
                 src="https://drive.google.com/uc?export=view&id=1DpKj6SxVF5dumPIsQAH65AML1_CHbdZ0"
-                alt="Memory 7"
+                alt="ehek buat lopee"
+                loading="eager"
             >
 
             <div class="caption">
@@ -1590,7 +1665,6 @@ body {
     </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -1606,7 +1680,6 @@ body {
     <p class="game-subtitle">
         awak kene tembak sy biar kene.
     </p>
-
 
     <div
         class="game-area"
@@ -1635,7 +1708,6 @@ body {
             >
 
         </div>
-
 
         <div
             class="target-heart"
@@ -1681,9 +1753,7 @@ body {
             </div>
 
             <div class="win-text">
-
                 OFFICIAL SY MILIK CAYANG🤍🙈
-
             </div>
 
             <button
@@ -1703,7 +1773,7 @@ body {
         id="shootButton"
         onclick="shootLoveArrow()"
     >
-        🏹 SHOOT💘
+        SHOOT💘
     </button>
 
 
@@ -1715,7 +1785,6 @@ body {
     </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -1736,21 +1805,17 @@ body {
             🔒
         </div>
 
-
         <h2 class="locked-title">
             Ada satu lagi...
         </h2>
-
 
         <p class="locked-subtitle">
             try sayang teke apa password dia hehehehe🙈
         </p>
 
-
         <div class="passcode-title">
             Enter Passcode
         </div>
-
 
         <div
             class="passcode-dots"
@@ -1852,22 +1917,33 @@ body {
         </div>
 
 
-        <!-- SECRET -->
+        <!-- =================================================
+             SECRET
+        ================================================= -->
 
         <div id="secretContent">
 
 
-            <!-- YOUTUBE VIDEO -->
+            <!-- GOOGLE DRIVE MP4 -->
 
             <div class="video-wrapper">
 
-                <iframe
-                    src="https://www.youtube-nocookie.com/embed/pQ1So8ra1aQ?rel=0&modestbranding=1&playsinline=1"
-                    title="Birthday Video"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+                <video
+                    id="memoryVideo"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    controlsList="nodownload"
+                >
+
+                    <source
+                        src="https://drive.google.com/uc?export=download&id=1gJ_UAsDqbj_5ZOkD6JgoR0OtTXGEEXoe"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support video.
+
+                </video>
 
             </div>
 
@@ -1885,7 +1961,7 @@ body {
 
                     Terima kasih sayang dah hadir dalam
                     hidup sy and buat bnyk kenangan
-                    dengan sy selama ni🥺
+                    dengan sy selama ni🥺.
 
                     <br><br>
 
@@ -1917,7 +1993,6 @@ body {
 </section>
 
 
-
 <script>
 
 /* =====================================================
@@ -1926,29 +2001,49 @@ body {
 
 let envelopeOpened = false;
 
-if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
+if (
+    "scrollRestoration"
+    in history
+) {
+
+    history.scrollRestoration =
+        "manual";
 }
 
-window.scrollTo(0, 0);
+window.scrollTo(
+    0,
+    0
+);
 
-document.body.style.overflow = "hidden";
-document.documentElement.style.overflow = "hidden";
+document.body.style.overflow =
+    "hidden";
+
+document.documentElement.style.overflow =
+    "hidden";
 
 
-const forceTop = setInterval(function() {
+const forceTop =
+    setInterval(
+        function() {
 
-    if (!envelopeOpened) {
+            if (!envelopeOpened) {
 
-        window.scrollTo(0, 0);
+                window.scrollTo(
+                    0,
+                    0
+                );
 
-    } else {
+            } else {
 
-        clearInterval(forceTop);
+                clearInterval(
+                    forceTop
+                );
 
-    }
+            }
 
-}, 50);
+        },
+        50
+    );
 
 
 document.addEventListener(
@@ -1956,7 +2051,9 @@ document.addEventListener(
     function(event) {
 
         if (!envelopeOpened) {
+
             event.preventDefault();
+
         }
 
     },
@@ -1971,7 +2068,9 @@ document.addEventListener(
     function(event) {
 
         if (!envelopeOpened) {
+
             event.preventDefault();
+
         }
 
     },
@@ -1992,32 +2091,52 @@ function openEnvelope() {
     }
 
     const envelope =
-        document.getElementById("envelope");
+        document.getElementById(
+            "envelope"
+        );
 
     const opening =
-        document.getElementById("opening");
+        document.getElementById(
+            "opening"
+        );
 
     const birthdayContent =
-        document.getElementById("birthdayContent");
+        document.getElementById(
+            "birthdayContent"
+        );
 
+    window.scrollTo(
+        0,
+        0
+    );
 
-    window.scrollTo(0, 0);
+    envelopeOpened =
+        true;
 
-    envelopeOpened = true;
+    envelope.classList.add(
+        "open"
+    );
 
-    envelope.classList.add("open");
+    setTimeout(
+        function() {
 
+            opening.classList.add(
+                "hide"
+            );
 
-    setTimeout(function() {
+            document.body.style.overflow =
+                "auto";
 
-        opening.classList.add("hide");
+            document.documentElement.style.overflow =
+                "auto";
 
-        document.body.style.overflow = "auto";
-        document.documentElement.style.overflow = "auto";
+            birthdayContent.classList.add(
+                "show"
+            );
 
-        birthdayContent.classList.add("show");
-
-    }, 1300);
+        },
+        1300
+    );
 
 }
 
@@ -2027,6 +2146,7 @@ function openEnvelope() {
 ===================================================== */
 
 let gameWon = false;
+
 let targetPosition = 50;
 
 
@@ -2037,15 +2157,19 @@ function moveTarget() {
     }
 
     const target =
-        document.getElementById("target");
+        document.getElementById(
+            "target"
+        );
 
     const targetHeart =
-        document.getElementById("targetHeart");
-
+        document.getElementById(
+            "targetHeart"
+        );
 
     targetPosition =
-        Math.floor(Math.random() * 60) + 20;
-
+        Math.floor(
+            Math.random() * 60
+        ) + 20;
 
     target.style.left =
         targetPosition + "%";
@@ -2056,7 +2180,10 @@ function moveTarget() {
 }
 
 
-setInterval(moveTarget, 1700);
+setInterval(
+    moveTarget,
+    1700
+);
 
 
 /* =====================================================
@@ -2069,25 +2196,33 @@ function shootLoveArrow() {
         return;
     }
 
-
     const arrow =
-        document.getElementById("loveArrow");
+        document.getElementById(
+            "loveArrow"
+        );
 
     const target =
-        document.getElementById("target");
+        document.getElementById(
+            "target"
+        );
 
     const gameArea =
-        document.getElementById("gameArea");
+        document.getElementById(
+            "gameArea"
+        );
 
     const button =
-        document.getElementById("shootButton");
+        document.getElementById(
+            "shootButton"
+        );
 
     const status =
-        document.getElementById("gameStatus");
+        document.getElementById(
+            "gameStatus"
+        );
 
-
-    button.disabled = true;
-
+    button.disabled =
+        true;
 
     const areaRect =
         gameArea.getBoundingClientRect();
@@ -2095,13 +2230,11 @@ function shootLoveArrow() {
     const targetRect =
         target.getBoundingClientRect();
 
-
     const shooterX =
         areaRect.width / 2;
 
     const shooterY =
         areaRect.height - 80;
-
 
     const targetX =
         targetRect.left -
@@ -2113,22 +2246,22 @@ function shootLoveArrow() {
         areaRect.top +
         targetRect.height / 2;
 
-
     const difference =
         Math.abs(
             shooterX -
             targetX
         );
 
-
-    arrow.style.display = "block";
+    arrow.style.display =
+        "block";
 
     arrow.style.left =
-        (shooterX - 45) + "px";
+        (
+            shooterX - 45
+        ) + "px";
 
     arrow.style.top =
         shooterY + "px";
-
 
     const angle =
         Math.atan2(
@@ -2139,29 +2272,35 @@ function shootLoveArrow() {
         180 /
         Math.PI;
 
-
     arrow.style.transform =
-        "rotate(" + angle + "deg)";
+        "rotate(" +
+        angle +
+        "deg)";
 
 
-    if (difference < 95) {
+    if (
+        difference < 95
+    ) {
 
         status.innerHTML =
             "💘 KENA! AIKA DAH KENA PANAH CINTA! ❤️";
 
+        setTimeout(
+            function() {
 
-        setTimeout(function() {
+                arrow.style.display =
+                    "none";
 
-            arrow.style.display = "none";
+                createHitEffect(
+                    targetX,
+                    targetY
+                );
 
-            createHitEffect(
-                targetX,
-                targetY
-            );
+                winGame();
 
-            winGame();
-
-        }, 500);
+            },
+            500
+        );
 
     }
 
@@ -2170,16 +2309,20 @@ function shootLoveArrow() {
         status.innerHTML =
             "HAHAHA TAK KENA 😭 Cuba lagi!";
 
+        setTimeout(
+            function() {
 
-        setTimeout(function() {
+                arrow.style.display =
+                    "none";
 
-            arrow.style.display = "none";
+                button.disabled =
+                    false;
 
-            button.disabled = false;
+                moveTarget();
 
-            moveTarget();
-
-        }, 600);
+            },
+            600
+        );
 
     }
 
@@ -2190,24 +2333,32 @@ function shootLoveArrow() {
    HIT EFFECT
 ===================================================== */
 
-function createHitEffect(x, y) {
+function createHitEffect(
+    x,
+    y
+) {
 
     const gameArea =
-        document.getElementById("gameArea");
+        document.getElementById(
+            "gameArea"
+        );
 
-
-    for (let i = 0; i < 8; i++) {
+    for (
+        let i = 0;
+        i < 8;
+        i++
+    ) {
 
         const heart =
-            document.createElement("div");
-
+            document.createElement(
+                "div"
+            );
 
         heart.className =
             "hit-heart";
 
         heart.innerHTML =
             "❤️";
-
 
         heart.style.left =
             (
@@ -2216,7 +2367,6 @@ function createHitEffect(x, y) {
                 30
             ) + "px";
 
-
         heart.style.top =
             (
                 y +
@@ -2224,15 +2374,18 @@ function createHitEffect(x, y) {
                 20
             ) + "px";
 
+        gameArea.appendChild(
+            heart
+        );
 
-        gameArea.appendChild(heart);
+        setTimeout(
+            function() {
 
+                heart.remove();
 
-        setTimeout(function() {
-
-            heart.remove();
-
-        }, 1000);
+            },
+            1000
+        );
 
     }
 
@@ -2245,28 +2398,33 @@ function createHitEffect(x, y) {
 
 function winGame() {
 
-    gameWon = true;
-
+    gameWon =
+        true;
 
     const winMessage =
-        document.getElementById("winMessage");
+        document.getElementById(
+            "winMessage"
+        );
 
     const button =
-        document.getElementById("shootButton");
+        document.getElementById(
+            "shootButton"
+        );
 
     const status =
-        document.getElementById("gameStatus");
+        document.getElementById(
+            "gameStatus"
+        );
 
-
-    button.disabled = true;
-
+    button.disabled =
+        true;
 
     status.innerHTML =
         "MISSION COMPLETE ❤️🏹";
 
-
-    winMessage.classList.add("show");
-
+    winMessage.classList.add(
+        "show"
+    );
 
     createConfetti();
 
@@ -2280,6 +2438,7 @@ function winGame() {
 function createConfetti() {
 
     const emojis = [
+
         "❤️",
         "💗",
         "💖",
@@ -2287,18 +2446,22 @@ function createConfetti() {
         "✨",
         "🎉",
         "🏹"
+
     ];
 
-
-    for (let i = 0; i < 35; i++) {
+    for (
+        let i = 0;
+        i < 35;
+        i++
+    ) {
 
         const confetti =
-            document.createElement("div");
-
+            document.createElement(
+                "div"
+            );
 
         confetti.className =
             "confetti";
-
 
         confetti.innerHTML =
             emojis[
@@ -2308,10 +2471,10 @@ function createConfetti() {
                 )
             ];
 
-
         confetti.style.left =
-            Math.random() * 100 + "vw";
-
+            Math.random() *
+            100 +
+            "vw";
 
         confetti.style.animationDuration =
             (
@@ -2319,21 +2482,23 @@ function createConfetti() {
                 Math.random() * 2
             ) + "s";
 
-
         confetti.style.animationDelay =
             (
                 Math.random() * .8
             ) + "s";
 
+        document.body.appendChild(
+            confetti
+        );
 
-        document.body.appendChild(confetti);
+        setTimeout(
+            function() {
 
+                confetti.remove();
 
-        setTimeout(function() {
-
-            confetti.remove();
-
-        }, 4000);
+            },
+            4000
+        );
 
     }
 
@@ -2347,14 +2512,17 @@ function createConfetti() {
 function continueAfterGame() {
 
     const locked =
-        document.getElementById("locked");
-
+        document.getElementById(
+            "locked"
+        );
 
     locked.scrollIntoView({
 
-        behavior: "smooth",
+        behavior:
+            "smooth",
 
-        block: "start"
+        block:
+            "start"
 
     });
 
@@ -2374,17 +2542,20 @@ let enteredPIN =
 
 function pressKey(number) {
 
-    if (enteredPIN.length >= 6) {
+    if (
+        enteredPIN.length >= 6
+    ) {
         return;
     }
 
-
-    enteredPIN += number;
+    enteredPIN +=
+        number;
 
     updateDots();
 
-
-    if (enteredPIN.length === 6) {
+    if (
+        enteredPIN.length === 6
+    ) {
 
         setTimeout(
             checkPIN,
@@ -2403,22 +2574,35 @@ function pressKey(number) {
 function updateDots() {
 
     const dots =
-        document.querySelectorAll(".dot");
+        document.querySelectorAll(
+            ".dot"
+        );
 
+    dots.forEach(
+        function(
+            dot,
+            index
+        ) {
 
-    dots.forEach(function(dot, index) {
+            if (
+                index <
+                enteredPIN.length
+            ) {
 
-        if (index < enteredPIN.length) {
+                dot.classList.add(
+                    "filled"
+                );
 
-            dot.classList.add("filled");
+            } else {
 
-        } else {
+                dot.classList.remove(
+                    "filled"
+                );
 
-            dot.classList.remove("filled");
+            }
 
         }
-
-    });
+    );
 
 }
 
@@ -2430,23 +2614,36 @@ function updateDots() {
 function checkPIN() {
 
     const error =
-        document.getElementById("passcodeError");
+        document.getElementById(
+            "passcodeError"
+        );
 
     const lockedBox =
-        document.getElementById("lockedBox");
+        document.getElementById(
+            "lockedBox"
+        );
 
     const lockIcon =
-        document.getElementById("lockIcon");
+        document.getElementById(
+            "lockIcon"
+        );
 
     const secret =
-        document.getElementById("secretContent");
+        document.getElementById(
+            "secretContent"
+        );
 
 
     /* PASSWORD BETUL */
 
-    if (enteredPIN === correctPIN) {
+    if (
+        enteredPIN ===
+        correctPIN
+    ) {
 
-        error.classList.remove("show");
+        error.classList.remove(
+            "show"
+        );
 
         lockIcon.innerHTML =
             "🔓";
@@ -2455,25 +2652,48 @@ function checkPIN() {
             "scale(1.2)";
 
 
-        setTimeout(function() {
+        setTimeout(
+            function() {
 
-            secret.style.display =
-                "block";
+                secret.style.display =
+                    "block";
 
 
-            setTimeout(function() {
+                setTimeout(
+                    function() {
 
-                secret.scrollIntoView({
+                        secret.scrollIntoView({
 
-                    behavior: "smooth",
+                            behavior:
+                                "smooth",
 
-                    block: "center"
+                            block:
+                                "center"
 
-                });
+                        });
 
-            }, 150);
 
-        }, 500);
+                        /*
+                         * Cuba load video selepas
+                         * secret dibuka.
+                         */
+
+                        const video =
+                            document.getElementById(
+                                "memoryVideo"
+                            );
+
+                        if (video) {
+                            video.load();
+                        }
+
+                    },
+                    150
+                );
+
+            },
+            500
+        );
 
     }
 
@@ -2482,23 +2702,31 @@ function checkPIN() {
 
     else {
 
-        error.classList.add("show");
+        error.classList.add(
+            "show"
+        );
 
-
-        lockedBox.classList.remove("shake");
+        lockedBox.classList.remove(
+            "shake"
+        );
 
         void lockedBox.offsetWidth;
 
-        lockedBox.classList.add("shake");
+        lockedBox.classList.add(
+            "shake"
+        );
 
+        setTimeout(
+            function() {
 
-        setTimeout(function() {
+                enteredPIN =
+                    "";
 
-            enteredPIN = "";
+                updateDots();
 
-            updateDots();
-
-        }, 600);
+            },
+            600
+        );
 
     }
 
@@ -2507,4 +2735,5 @@ function checkPIN() {
 </script>
 
 </body>
+
 </html>
